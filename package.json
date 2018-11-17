@@ -1,6 +1,7 @@
 {
   "name": "uzi-vue",
   "version": "0.0.1",
+  "description": "uzi-vue---->",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
