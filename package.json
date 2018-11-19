@@ -2,7 +2,7 @@
   "name": "uzi-vue",
   "version": "0.0.1",
   "description": "uzi-vue---->",
-  "private": true,
+  "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -10,6 +10,21 @@
     "test:unit": "vue-cli-service test:unit --watch",
     "test": "vue-cli-service test:unit"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/funny-man/uzi-vue"
+  },
+  "bugs": {
+    "url": "https://github.com/funny-man/uzi-vue/issues"
+  },
+  "homepage": "https://github.com/funny-man/uzi-vue",
+  "keywords": [
+    "vue",
+    "ui",
+    "uzi"
+  ],
+  "author": "zeeliu",
+  "license": "MIT",
   "dependencies": {
     "vue": "^2.5.17"
   },
