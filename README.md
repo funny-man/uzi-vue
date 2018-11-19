@@ -1,6 +1,8 @@
 # uzi-vue
 >哥的轮子要开始了
 
+[![Build Status](https://www.travis-ci.org/funny-man/uzi-vue.svg?branch=develop)](https://www.travis-ci.org/funny-man/uzi-vue)
+
 ## Project setup
 ```
 npm install
