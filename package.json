@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "uzi-vue---->",
   "main": "./dist/index.html",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -23,7 +24,7 @@
     "ui",
     "uzi"
   ],
-  "author": "zeeliu",
+  "author": "zeeliu<zeeliu666@163.com>",
   "license": "MIT",
   "dependencies": {
     "vue": "^2.5.17"
