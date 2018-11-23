@@ -1,0 +1,97 @@
+/* Colors
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+$color-white: #fff;
+$color-black: #000;
+
+
+$color-primary: #312F3B;
+$color-primary-pink: #F35F85;
+
+// 颜色梯度primary-pink
+$color-primary-light-1: mix($color-white, $color-primary-pink, 20%);
+$color-primary-light-2: mix($color-white, $color-primary-pink, 40%);
+$color-primary-light-3: mix($color-white, $color-primary-pink, 60%);
+$color-primary-light-4: mix($color-white, $color-primary-pink, 80%);
+// 颜色梯度primary
+$color-primary-light-1: mix($color-white, $color-primary, 20%);
+$color-primary-light-2: mix($color-white, $color-primary, 40%);
+$color-primary-light-3: mix($color-white, $color-primary, 60%);
+$color-primary-light-4: mix($color-white, $color-primary, 80%);
+
+// 辅助色
+$color-success: #67c23a;
+$color-warning: #e6a23c;
+$color-danger: #f56c6c;
+$color-info: #909399;
+
+// $--color-success-light: mix($--color-white, $--color-success, 80%);
+// $--color-warning-light: mix($--color-white, $--color-warning, 80%);
+// $--color-danger-light: mix($--color-white, $--color-danger, 80%);
+// $--color-info-light: mix($--color-white, $--color-info, 80%);
+
+// $--color-success-lighter: mix($--color-white, $--color-success, 90%);
+// $--color-warning-lighter: mix($--color-white, $--color-warning, 90%);
+// $--color-danger-lighter: mix($--color-white, $--color-danger, 90%);
+// $--color-info-lighter: mix($--color-white, $--color-info, 90%);
+
+// $--color-text-primary: #303133;
+// $--color-text-regular: #606266;
+// $--color-text-secondary: #909399;
+// $--color-text-placeholder: #c0c4cc;
+
+
+/* Border
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+$border-width-base: 1px;
+
+$border-style-solid: solid;
+$border-style-dashed: dashed;
+
+$border-color-base: #dcdfe6;
+$border-color-light: #e4e7ed;
+$border-color-lighter: #ebeef5;
+$border-color-extra-light: #f2f6fc;
+$border-color-hover: $--color-text-placeholder;
+
+// 实线
+$border-base: $border-width-base $border-style-solid $border-color-base;
+// 虚线
+$border-base: $border-width-base $border-style-dashed $border-color-base;
+
+$border-radius-base: 6px;
+$border-radius-small: 2px;
+
+// max radius
+$border-radius-circle: 100%;
+$border-radius-circle: 99999px;
+
+/* Box-shadow
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12);
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+/* Size
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+// font-size
+$fontSize-xxxx: 32px;
+$fontSize-xxx: 30px;
+$fontSize-xx: 28px;
+$fontSize-x: 24px;
+$fontSize-mmm: 20px;
+$fontSize-mm: 18px;
+$fontSize-m: 16px;
+$fontSize-s: 14px;
+$fontSize-ss: 12px;
+$fontSize-sss: 10px;
+
+// font-weigth
+$fontWeigth-bold: 700;
+$fontWeigth-medium: 500;
+$fontWeigth-slim: 300;
+
+// radius-size
+$radius-size-big: 10px;
+$radius-size-medium: 6px;
+$radius-size-small: 4px;
