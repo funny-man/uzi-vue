@@ -17,6 +17,9 @@ $color-primary-light-1: mix($color-white, $color-primary, 20%);
 $color-primary-light-2: mix($color-white, $color-primary, 40%);
 $color-primary-light-3: mix($color-white, $color-primary, 60%);
 $color-primary-light-4: mix($color-white, $color-primary, 80%);
+// 字体颜色
+$fontColor-white: #fff;
+$fontColor-black: #000;
 
 // 辅助色
 $color-success: #67c23a;
@@ -51,25 +54,27 @@ $border-color-base: #dcdfe6;
 $border-color-light: #e4e7ed;
 $border-color-lighter: #ebeef5;
 $border-color-extra-light: #f2f6fc;
-$border-color-hover: $--color-text-placeholder;
+// $border-color-hover: $--color-text-placeholder;
 
 // 实线
 $border-base: $border-width-base $border-style-solid $border-color-base;
 // 虚线
 $border-base: $border-width-base $border-style-dashed $border-color-base;
 
-$border-radius-base: 6px;
-$border-radius-small: 2px;
+
+// radius-size
+$radius-size-base: 3px;
+$radius-size-big: 10px;
+$radius-size-medium: 6px;
+$radius-size-small: 4px;
 
 // max radius
-$border-radius-circle: 100%;
-$border-radius-circle: 99999px;
+$radius-size-circle: 100%;
+$radius-size-round: 99999px;
 
 /* Box-shadow
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12);
-$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$btn-shadow-base: 0 3px 9px rgba(243, 95, 133, .5);
 
 /* Size
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -90,8 +95,3 @@ $fontSize-sss: 10px;
 $fontWeigth-bold: 700;
 $fontWeigth-medium: 500;
 $fontWeigth-slim: 300;
-
-// radius-size
-$radius-size-big: 10px;
-$radius-size-medium: 6px;
-$radius-size-small: 4px;
