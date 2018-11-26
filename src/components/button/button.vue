@@ -8,12 +8,13 @@
               'is-edge':edge,
               'is-shadow':shadow,
               'is-block':block,
-              'is-circle': circle
+              'is-circle': circle,
+              [`icon-${iconPosition}`]: true
             }
           ]"
   >
   <z-icon class="z-icon" v-if="icon||loading" :icon="icon" :loading="loading"></z-icon>
-  <slot></slot>
+  <div class="content"><slot></slot></div>
   </button>
 </template>
 
@@ -64,59 +65,92 @@ export default {
       type: String,
       default: '',
     },
+    iconPosition: {
+      type: String,
+      default: 'left',
+      // 属性检查器（检查传入iconPosition的值）
+      validator(val) {
+        return !(val !== 'left' && val !== 'right');
+      },
+    },
   },
 };
 </script>
 
 <style scoped lang="scss">
-@import '../../sass/var.scss';
-@import '../../sass/animation.scss';
-  .z-icon {
-    margin-right: 8px;
-    vertical-align: middle;
-  }
-  .z-button {
-    padding: 0;
-    border: none;
-    background-color: $color-primary;
-    border-radius: $radius-size-base;
-  }
-  .is-block {
-    width: 100%;
-  }
-  .is-shadow {
-    box-shadow: $btn-shadow-base;
-  }
-  .is-round {
-    border-radius: $radius-size-round;
-  }
-  .is-circle {
-    border-radius: $radius-size-circle;
-    padding: 13px!important;
-    line-height: 0;
-    >.z-icon {
-      margin-right: 0;
-    }
-  }
-  .is-edge {
-    border-radius: 0;
-  }
-  .large {
-    color: $fontColor-white;
-    font-size: $fontSize-s;
+@import "../../sass/var.scss";
+@import "../../sass/animation.scss";
+.z-icon {
+  margin-right: 0.5em;
+}
+.z-button {
+  padding: 0;
+  border: none;
+  background-color: $color-primary;
+  border-radius: $radius-size-base;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  .content {
     font-weight: $fontWeigth-bold;
-    padding: 14px 22px;
   }
-  .medium {
-    color: $fontColor-white;
-    font-size: $fontSize-s;
-    font-weight: $fontWeigth-bold;
-    padding: 10px 22px;
+}
+.is-block {
+  width: 100%;
+}
+.is-shadow {
+  box-shadow: $btn-shadow-base;
+}
+.is-round {
+  border-radius: $radius-size-round;
+}
+.is-circle {
+  border-radius: $radius-size-circle;
+  padding: 1em !important;
+  line-height: 0;
+  > .z-icon {
+    margin: 0 !important;
   }
-  .small {
-    color: $fontColor-white;
-    font-size: $fontSize-ss;
-    font-weight: $fontWeigth-bold;
-    padding: 7px 16px;
+}
+.is-edge {
+  border-radius: 0;
+}
+// 控制icon的左右
+.icon-left {
+  > .z-icon {
+    order: 1;
+    margin-right: 0.5em;
   }
+  > .content {
+    order: 2;
+  }
+}
+.icon-right {
+  > .z-icon {
+    margin-right: 0;
+    margin-left: 0.5em;
+    order: 2;
+  }
+  > .content {
+    order: 1;
+  }
+}
+
+// 按钮大小控制
+.large {
+  color: $fontColor-white;
+  font-size: $fontSize-s;
+  padding: 14px 20px;
+}
+.medium {
+  color: $fontColor-white;
+  font-size: $fontSize-s;
+  padding: 10px 20px;
+}
+.small {
+  color: $fontColor-white;
+  font-size: $fontSize-ss;
+  padding: 7px 15px;
+}
 </style>
