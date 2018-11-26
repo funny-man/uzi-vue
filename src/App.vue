@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <z-button shadow block>Large Button</z-button>
+    <z-button shadow block loading>Large Button</z-button>
     <div class="gap"/>
     <z-button edge >Edge Button</z-button>
     <div class="gap"/>
@@ -10,17 +10,20 @@
     <div class="gap"/>
     <z-button size="small">Small Button</z-button>
     <div class="gap"/>
-    <z-icon class="my-icon" icon="shares"></z-icon>
-    <z-icon class="my-icon" icon="left"></z-icon>
-    <z-icon class="my-icon" icon="right"></z-icon>
-    <z-icon class="my-icon" icon="loading"></z-icon>
-    <z-button class="my-icon" size="medium" icon="settings">分 享</z-button>
-    <z-button class="my-icon" size="medium" loading>分 享</z-button>
-    <z-button class="my-icon" circle icon="shares"></z-button>
-    <z-button class="my-icon" circle icon="left"></z-button>
-    <z-button class="my-icon" circle icon="right"></z-button>
-
-
+    <z-button class="my-icon" loading>分 享</z-button>
+    <z-button class="my-icon" size="medium" icon="left">上一页</z-button>
+    <z-button class="my-icon" size="medium" icon="right" iconPosition="right">下一页</z-button>
+    <z-button class="my-icon" size="small" icon="download">分 享</z-button>
+    <div class="gap"/>
+    <z-button class="my-icon one" circle icon="shares"></z-button>
+    <z-button class="my-icon two" circle icon="shares"></z-button>
+    <z-button class="my-icon three" circle icon="shares"></z-button>
+    <z-button class="my-icon" circle loading></z-button>
+    <div class="gap"/>
+    <z-icon class="my-icon icon-font" icon="shares"></z-icon>
+    <z-icon class="my-icon icon-font" icon="left"></z-icon>
+    <z-icon class="my-icon icon-font" icon="right"></z-icon>
+    <z-icon class="my-icon icon-font" icon="loading"></z-icon>
   </div>
 </template>
 
@@ -53,8 +56,19 @@ export default {
   height: 30px;
 }
 .my-icon {
-  font-size: 30px;
   color: $color-primary-pink;
   margin-right: 10px;
+}
+.one {
+  font-size: 20px !important;
+}
+.two {
+  font-size: 16px !important;
+}
+.three {
+  font-size: 12px !important;
+}
+.icon-font {
+  font-size: 30px;
 }
 </style>
