@@ -1,7 +1,8 @@
 <template>
-  <button class="z-button"
-          type="button"
-          :class="[
+  <button
+    class="z-button"
+    type="button"
+    :class="[
             size,
             {
               'is-round':round,
@@ -12,9 +13,12 @@
               [`icon-${iconPosition}`]: true
             }
           ]"
+    @click="$emit('click')"
   >
-  <z-icon class="z-icon" v-if="icon||loading" :icon="icon" :loading="loading"></z-icon>
-  <div class="content"><slot></slot></div>
+    <z-icon class="z-icon" v-if="icon||loading" :icon="icon" :loading="loading"></z-icon>
+    <div class="content">
+      <slot></slot>
+    </div>
   </button>
 </template>
 
@@ -83,18 +87,38 @@ export default {
 .z-icon {
   margin-right: 0.5em;
 }
+/*默认按钮类型(后面的type类型覆盖这里)
+*****************************************/
 .z-button {
-  padding: 0;
-  border: none;
-  background-color: $color-primary;
-  border-radius: $radius-size-base;
+  // 按钮内部布局不会根据按钮类型改变
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+  // 按钮圆角根据选择（尖锐，大圆角，圆形）的样式将被覆盖
+  border-radius: $radius-size-base;
+  // 聚焦状态下的border设置为none
+  box-sizing: border-box;
+  outline: none;
   .content {
     font-weight: $fontWeigth-bold;
   }
+  // 基本样式，根据按钮的type改变
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  color: $fontColor-white;
+  // &:hover,
+  // &:focus {
+  //   background: ;
+  //   border-color: ;
+  //   color: ;
+  // }
+  // &:active {
+  //   background: $--color-white;
+  //   border-color: ;
+  //   color: ;
+  //   outline: none;
+  // }
 }
 .is-block {
   width: 100%;
@@ -116,7 +140,8 @@ export default {
 .is-edge {
   border-radius: 0;
 }
-// 控制icon的左右
+/*控制icon的左右
+*****************************************/
 .icon-left {
   > .z-icon {
     order: 1;
@@ -137,20 +162,25 @@ export default {
   }
 }
 
-// 按钮大小控制
+/*按钮大小控制(里面控制字体大小和内边距)
+*****************************************/
 .large {
-  color: $fontColor-white;
   font-size: $fontSize-s;
   padding: 14px 20px;
 }
 .medium {
-  color: $fontColor-white;
   font-size: $fontSize-s;
   padding: 10px 20px;
 }
 .small {
-  color: $fontColor-white;
   font-size: $fontSize-ss;
   padding: 7px 15px;
 }
+/*控制按钮类型{
+    背景色，
+    边框状态，
+    并且按钮的点击悬浮聚焦等状态要根据按钮类型的颜色设置，
+    点击按钮的动效果
+  }
+*****************************************/
 </style>
