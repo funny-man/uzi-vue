@@ -76,7 +76,7 @@ export default {
 }
 .my-icon {
   color: $color-primary-pink;
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 .one {
   font-size: 20px !important;
