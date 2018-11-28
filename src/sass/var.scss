@@ -4,19 +4,26 @@ $color-white: #fff;
 $color-black: #000;
 
 
-$color-primary: #312F3B;
+$color-primary: #252525;
 $color-primary-pink: #F35F85;
 
-// 颜色梯度primary-pink
-$color-primary-light-1: mix($color-white, $color-primary-pink, 20%);
-$color-primary-light-2: mix($color-white, $color-primary-pink, 40%);
-$color-primary-light-3: mix($color-white, $color-primary-pink, 60%);
-$color-primary-light-4: mix($color-white, $color-primary-pink, 80%);
 // 颜色梯度primary
-$color-primary-light-1: mix($color-white, $color-primary, 20%);
-$color-primary-light-2: mix($color-white, $color-primary, 40%);
-$color-primary-light-3: mix($color-white, $color-primary, 60%);
-$color-primary-light-4: mix($color-white, $color-primary, 80%);
+$color-primary-light-1: mix($color-white, $color-primary, 10%);
+$color-primary-light-2: mix($color-white, $color-primary, 20%);
+$color-primary-light-4: mix($color-white, $color-primary, 40%);
+$color-primary-light-6: mix($color-white, $color-primary, 60%);
+$color-primary-light-8: mix($color-white, $color-primary, 80%);
+$color-primary-dark-1: mix($color-black, $color-primary, 10%);
+
+// 颜色梯度primary-pink
+$color-primary-pink-light-1: mix($color-white, $color-primary-pink, 10%);
+$color-primary-pink-light-2: mix($color-white, $color-primary-pink, 20%);
+$color-primary-pink-light-4: mix($color-white, $color-primary-pink, 40%);
+$color-primary-pink-light-6: mix($color-white, $color-primary-pink, 60%);
+$color-primary-pink-light-8: mix($color-white, $color-primary-pink, 80%);
+$color-primary--pink-dark-1: mix($color-black, $color-primary-pink, 5%);
+
+
 // 字体颜色
 $fontColor-white: #fff;
 $fontColor-black: #000;
