@@ -84,9 +84,6 @@ export default {
 <style scoped lang="scss">
 @import "../../sass/var.scss";
 @import "../../sass/animation.scss";
-.z-icon {
-  margin-right: 0.5em;
-}
 /*默认按钮类型(后面的type类型覆盖这里)
 *****************************************/
 .z-button {
@@ -95,6 +92,7 @@ export default {
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+  margin: 0;
   // 按钮圆角根据选择（尖锐，大圆角，圆形）的样式将被覆盖
   border-radius: $radius-size-base;
   // 聚焦状态下的border设置为none
@@ -107,18 +105,14 @@ export default {
   border: 1px solid $color-primary;
   background-color: $color-primary;
   color: $fontColor-white;
-  // &:hover,
-  // &:focus {
-  //   background: ;
-  //   border-color: ;
-  //   color: ;
-  // }
-  // &:active {
-  //   background: $--color-white;
-  //   border-color: ;
-  //   color: ;
-  //   outline: none;
-  // }
+  &:hover,
+  &:focus {
+    background: $color-primary-light-1;
+  }
+  &:active {
+    background: $color-primary-dark-1;
+    outline: none;
+  }
 }
 .is-block {
   width: 100%;
