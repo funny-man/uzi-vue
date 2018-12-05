@@ -16,15 +16,34 @@ export default {
 @import "../../sass/var.scss";
 @import "../../sass/animation.scss";
 .z-button-group {
+  display: inline-block;
   .z-button {
-    border-radius: 0;
+    margin-left: -1px;
     &:first-child {
-      border-top-left-radius: $radius-size-base;
-      border-bottom-left-radius: $radius-size-base;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
     &:last-child {
-      border-top-right-radius: $radius-size-base;
-      border-bottom-right-radius: $radius-size-base
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:not(:first-child) {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    &:not(:last-child) {
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    &:hover,
+    &:focus {
+      position: relative;
+      z-index: 1;
+    }
+    &:active {
+      position: relative;
+      z-index: 1;
     }
   }
 }

@@ -25,6 +25,7 @@ export default {
   .icon {
     width: 1em;
     height: 1em;
+    line-height: 1;
     fill: currentColor;
     overflow: hidden;
   }
