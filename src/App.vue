@@ -35,8 +35,6 @@
     <z-icon class="my-icon icon-font" icon="left"></z-icon>
     <z-icon class="my-icon icon-font" icon="right"></z-icon>
     <z-icon class="my-icon icon-font" loading></z-icon>
-
-    <play></play>
   </div>
 </template>
 
@@ -44,7 +42,6 @@
 import Button from './components/button/button.vue';
 import Icon from './components/icon/icon.vue';
 import ButtonGroup from './components/button_group/button_group.vue';
-import Play from './components/play.vue';
 
 export default {
   name: 'app',
@@ -52,7 +49,6 @@ export default {
     'z-button': Button,
     'z-icon': Icon,
     'z-button-group': ButtonGroup,
-    Play,
   },
   data() {
     return {
