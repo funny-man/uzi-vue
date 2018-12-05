@@ -10,7 +10,9 @@
               'is-shadow':shadow,
               'is-block':block,
               'is-circle': circle,
-              [`icon-${iconPosition}`]: true
+              [`icon-${iconPosition}`]: true,
+              'icon-center': noChild,
+              [`type-${type}`]: true,
             }
           ]"
     @click="$emit('click')"
@@ -31,10 +33,15 @@ export default {
     'z-icon': Icon,
   },
   props: {
-    // 按钮尺寸
+    // 按钮尺寸large/medium/small
     size: {
       type: String,
       default: 'large',
+    },
+    // 按钮样式default/primary/success/warning/error
+    type: {
+      type: String,
+      default: 'default',
     },
     // 最大圆角
     round: {
@@ -69,6 +76,7 @@ export default {
       type: String,
       default: '',
     },
+    // icon位置 left/right
     iconPosition: {
       type: String,
       default: 'left',
@@ -78,12 +86,20 @@ export default {
       },
     },
   },
+  computed: {
+    // 判断插槽是否有输入内容；来设置icon是否有左右margin
+    noChild() {
+      return !(this.$slots.default && this.$slots.default.length !== 0);
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import "../../sass/var.scss";
 @import "../../sass/animation.scss";
+@import "../../sass/utils.scss";
+
 /*默认按钮类型(后面的type类型覆盖这里)
 *****************************************/
 .z-button {
@@ -93,26 +109,33 @@ export default {
   align-items: center;
   vertical-align: middle;
   margin: 0;
+  line-height: 1;
   // 按钮圆角根据选择（尖锐，大圆角，圆形）的样式将被覆盖
   border-radius: $radius-size-base;
   // 聚焦状态下的border设置为none
   box-sizing: border-box;
   outline: none;
   .content {
+    // 字体加粗
     font-weight: $fontWeigth-bold;
   }
-  // 基本样式，根据按钮的type改变
-  border: 1px solid $color-primary;
-  background-color: $color-primary;
-  color: $fontColor-white;
-  &:hover,
-  &:focus {
-    background: $color-primary-light-1;
-  }
-  &:active {
-    background: $color-primary-dark-1;
-    outline: none;
-  }
+  border: 1px solid;
+}
+// 不传type的按钮样式
+.type-default {
+  @include button-type($fontColor-white,$color-primary,$color-primary);
+}
+.type-primary {
+  @include button-type($fontColor-white,$color-primary-pink,$color-primary-pink);
+}
+.type-success {
+  @include button-type($fontColor-white,$color-success,$color-success);
+}
+.type-warning {
+  @include button-type($fontColor-white,$color-warning,$color-warning);
+}
+.type-error {
+  @include button-type($fontColor-white,$color-error,$color-error);
 }
 .is-block {
   width: 100%;
@@ -126,7 +149,6 @@ export default {
 .is-circle {
   border-radius: $radius-size-circle;
   padding: 1em !important;
-  line-height: 0;
   > .z-icon {
     margin: 0 !important;
   }
@@ -147,7 +169,6 @@ export default {
 }
 .icon-right {
   > .z-icon {
-    margin-right: 0;
     margin-left: 0.5em;
     order: 2;
   }
@@ -155,11 +176,16 @@ export default {
     order: 1;
   }
 }
+.icon-center {
+  > .z-icon {
+    margin: 0;
+  }
+}
 
 /*按钮大小控制(里面控制字体大小和内边距)
 *****************************************/
 .large {
-  font-size: $fontSize-s;
+  font-size: $fontSize-m;
   padding: 14px 20px;
 }
 .medium {
