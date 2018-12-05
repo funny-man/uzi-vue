@@ -10,3 +10,44 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+// button通过传入主色设置边框色,悬浮颜色,聚焦颜色...
+
+@mixin button-type($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  &:hover,
+  &:focus {
+    background: mix(#ffffff, $background-color, 10%);
+    border-color: mix(#ffffff, $border-color, 10%);
+    color: $color;
+  }
+  
+  &:active {
+    background: mix(#000000, $background-color, 10%);
+    border-color: mix(#000000, $border-color, 10%);
+    color: $color;
+    outline: none;
+  }
+  // &.is-active {
+  //   background: mix($--color-black, $background-color, $--button-active-shade-percent);
+  //   border-color: mix($--color-black, $border-color, $--button-active-shade-percent);
+  //   color: $color;
+  // }
+  // 禁用状态样式
+  // &.is-disabled {
+  //   &,
+  //   &:hover,
+  //   &:focus,
+  //   &:active {
+  //     color: $--color-white;
+  //     background-color: mix($background-color, $--color-white);
+  //     border-color: mix($border-color, $--color-white);
+  //   }
+  // }
+
+  // &.is-plain {
+  //   @include button-plain($background-color);
+  // }
+}
