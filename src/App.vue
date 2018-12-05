@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <z-button shadow block loading>Large Button</z-button>
+    <z-button type="primary" shadow block loading>Large Button</z-button>
+    <div class="gap" ref="test" style="width:100px"/>
+    <z-button type="success" edge >Edge Button</z-button>
     <div class="gap"/>
-    <z-button edge >Edge Button</z-button>
+    <z-button type="warning" round @click="goShares" :loading="isLoading">Round Button</z-button>
     <div class="gap"/>
-    <z-button round @click="goShares" :loading="isLoading">Round Button</z-button>
-    <div class="gap"/>
-    <z-button size="medium">Medium Button</z-button>
+    <z-button type="error" size="medium">Medium Button</z-button>
     <div class="gap"/>
     <z-button size="small">Small Button</z-button>
     <div class="gap"/>
@@ -20,8 +20,14 @@
     <z-button class="my-icon three" circle icon="shares"></z-button>
     <z-button class="my-icon" circle loading></z-button>
     <div class="gap"/>
+    <z-button-group style="margin-right:20px;margin-bottom:20px">
+      <z-button round size="medium" icon="left">上一页</z-button>
+      <z-button round size="medium" icon="shares"></z-button>
+      <z-button round size="medium" icon="right" iconPosition="right">下一页</z-button>
+    </z-button-group>
     <z-button-group>
       <z-button size="medium" icon="left">上一页</z-button>
+      <z-button size="medium" icon="shares"></z-button>
       <z-button size="medium" icon="right" iconPosition="right">下一页</z-button>
     </z-button-group>
     <div class="gap"/>
@@ -29,6 +35,8 @@
     <z-icon class="my-icon icon-font" icon="left"></z-icon>
     <z-icon class="my-icon icon-font" icon="right"></z-icon>
     <z-icon class="my-icon icon-font" loading></z-icon>
+
+    <play></play>
   </div>
 </template>
 
@@ -36,6 +44,7 @@
 import Button from './components/button/button.vue';
 import Icon from './components/icon/icon.vue';
 import ButtonGroup from './components/button_group/button_group.vue';
+import Play from './components/play.vue';
 
 export default {
   name: 'app',
@@ -43,6 +52,7 @@ export default {
     'z-button': Button,
     'z-icon': Icon,
     'z-button-group': ButtonGroup,
+    Play,
   },
   data() {
     return {
@@ -73,6 +83,7 @@ export default {
 }
 .gap {
   height: 30px;
+  transition: all .7s;
 }
 .my-icon {
   color: $color-primary-pink;
