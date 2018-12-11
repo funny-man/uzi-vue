@@ -2,23 +2,29 @@
   <div id="app">
     <z-button type="primary" shadow block loading>Large Button</z-button>
     <div class="gap" ref="test" style="width:100px"/>
-    <z-button type="success" edge >Edge Button</z-button>
+    <z-button edge >Edge Button</z-button>
     <div class="gap"/>
-    <z-button type="warning" round @click="goShares" :loading="isLoading">Round Button</z-button>
+    <z-button round @click="goShares" :loading="isLoading">Round Button</z-button>
     <div class="gap"/>
-    <z-button type="error" size="medium">Medium Button</z-button>
+    <z-button size="medium">Medium Button</z-button>
     <div class="gap"/>
-    <z-button size="small">Small Button</z-button>
+    <z-button class="my-icon" size="small">Small Button</z-button>
+    <z-button class="my-icon" type="success" size="small">success</z-button>
+    <z-button class="my-icon" type="warning" size="small">warning</z-button>
+    <z-button class="my-icon" type="error" size="small">error</z-button>
     <div class="gap"/>
     <z-button class="my-icon" loading>分 享</z-button>
-    <z-button class="my-icon" size="medium" icon="settings">设 置</z-button>
+    <z-button class="my-icon" size="medium" icon="settings"></z-button>
     <z-button class="my-icon" size="small" icon="download">下 载</z-button>
     <div class="gap"/>
     <z-button class="my-icon one" circle @click="goShares" :loading="isLoading" icon="shares">
     </z-button>
     <z-button class="my-icon two" circle icon="shares"></z-button>
     <z-button class="my-icon three" circle icon="shares"></z-button>
-    <z-button class="my-icon" circle loading></z-button>
+     <z-button class="my-icon" @click="goShares" :loading="isLoading" icon="shares">
+    </z-button>
+    <z-button class="my-icon" size="medium" icon="shares"></z-button>
+    <z-button class="my-icon" size="small" icon="shares"></z-button>
     <div class="gap"/>
     <z-button-group style="margin-right:20px;margin-bottom:20px">
       <z-button round size="medium" icon="left">上一页</z-button>
