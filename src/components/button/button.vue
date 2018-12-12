@@ -111,6 +111,11 @@ export default {
       return !(this.$slots.default && this.$slots.default.length !== 0);
     },
   },
+  created() {
+    // body监听touchstart并且回调为空函数，用来解决ios端:active不起作用
+    document.body.addEventListener('touchstart', () => {
+    });
+  },
 };
 </script>
 
@@ -158,9 +163,6 @@ export default {
 }
 .is-block {
   width: 100%;
-}
-.is-shadow {
-  box-shadow: $btn-shadow-base;
 }
 .is-round {
   border-radius: $radius-size-round;

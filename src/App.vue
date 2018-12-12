@@ -16,19 +16,19 @@
     <div class="gap"/>
     <z-button class="my-icon" ghost size="small">Small Button</z-button>
     <z-button class="my-icon" round ghost type="success" size="small">success</z-button>
-    <z-button class="my-icon" edge ghost type="warning" size="small">warning</z-button>
+    <z-button class="my-icon" shadow edge ghost type="warning" size="small">warning</z-button>
     <z-button class="my-icon" ghost type="error" size="small">error</z-button>
     <div class="gap"/>
     <z-button class="my-icon" dashed size="small">Small Button</z-button>
     <z-button class="my-icon" dashed round type="success" size="small">success</z-button>
-    <z-button class="my-icon" dashed edge type="warning" size="small">warning</z-button>
+    <z-button class="my-icon" shadow dashed edge type="warning" size="small">warning</z-button>
     <z-button class="my-icon" dashed type="error" size="small">error</z-button>
     <div class="gap"/>
     <z-button class="my-icon" disabled ghost size="small" @click="goShares">Small Button</z-button>
     <z-button class="my-icon" disabled dashed round type="success" size="small" @click="goShares">
       success
     </z-button>
-    <z-button class="my-icon" disabled edge type="warning" size="small" @click="goShares">
+    <z-button class="my-icon" shadow disabled edge type="warning" size="small" @click="goShares">
       warning
     </z-button>
     <z-button class="my-icon" disabled type="error" size="small" @click="goShares">error</z-button>
