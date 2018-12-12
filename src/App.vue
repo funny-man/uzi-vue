@@ -11,7 +11,7 @@
     <z-button class="my-icon" size="small">Small Button</z-button>
     <div class="gap"/>
     <z-button class="my-icon" round type="success" size="small">success</z-button>
-    <z-button class="my-icon" round type="warning" size="small">warning</z-button>
+    <z-button class="my-icon" shadow  round type="warning" size="small">warning</z-button>
     <z-button class="my-icon" round type="error" size="small">error</z-button>
     <div class="gap"/>
     <z-button class="my-icon" ghost size="small">Small Button</z-button>

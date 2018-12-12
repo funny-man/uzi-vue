@@ -1,3 +1,5 @@
+@import './animation.scss';
+
 // 控制用户是否可以选中文本
 @mixin utils-user-select($value) {
   -moz-user-select: $value;
@@ -27,12 +29,10 @@
     border-color: mix(#ffffff, $border-color, 10%);
     color: $color;
   }
-  
   &:active {
     background: mix(#000000, $background-color, 10%);
     border-color: mix(#000000, $border-color, 10%);
     color: $color;
-    box-shadow: 0 0 0 5px rgba($color: #333, $alpha: 1) !important;
     outline: none;
   }
   &.is-shadow {
@@ -76,6 +76,10 @@
       border-style: dashed;
       outline: none;
     }
+  }
+  // 点击按钮特效
+  &.spread {
+    @include shadow-spread($background-color);
   }
   // 禁用状态样式
   &.is-disabled {

@@ -6,6 +6,7 @@
     :class="[
             size,
             {
+              'spread': spread,
               'is-disabled': disabled,
               'is-round':round,
               'is-edge':edge,
@@ -19,7 +20,7 @@
               [`type-${type}`]: true,
             }
           ]"
-    @click="$emit('click')"
+    @click="clickBtn"
   >
     <z-icon class="z-icon" v-if="icon||loading" :icon="icon" :loading="loading"></z-icon>
     <div class="content">
@@ -35,6 +36,11 @@ export default {
   name: 'z-button',
   components: {
     'z-icon': Icon,
+  },
+  data() {
+    return {
+      spread: false,
+    };
   },
   props: {
     // 禁用按钮
@@ -115,6 +121,20 @@ export default {
     // body监听touchstart并且回调为空函数，用来解决ios端:active不起作用
     document.body.addEventListener('touchstart', () => {
     });
+  },
+  methods: {
+    clickBtn() {
+      // 通过定时器设置按钮点击传播效果
+      // 这里在定时器里设置spread为false；
+      // 由于定时器的特性(一般情况下总是比设定时间大)只要设置时间和动画时间一样长就不会出错
+      let timer;
+      if (timer) clearTimeout(timer);
+      this.spread = true;
+      timer = setTimeout(() => {
+        // this.spread = false;
+      }, 500);
+      this.$emit('click');
+    },
   },
 };
 </script>
