@@ -2,14 +2,18 @@
   <button
     class="z-button"
     type="button"
+    :disabled="disabled"
     :class="[
             size,
             {
+              'is-disabled': disabled,
               'is-round':round,
               'is-edge':edge,
               'is-shadow':shadow,
               'is-block':block,
               'is-circle': circle,
+              'is-ghost': ghost,
+              'is-dashed': dashed,
               [`icon-${iconPosition}`]: true,
               'icon-center': noChild,
               [`type-${type}`]: true,
@@ -33,6 +37,11 @@ export default {
     'z-icon': Icon,
   },
   props: {
+    // 禁用按钮
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
     // 按钮尺寸large/medium/small
     size: {
       type: String,
@@ -42,6 +51,16 @@ export default {
     type: {
       type: String,
       default: 'default',
+    },
+    // 幽灵按钮
+    ghost: {
+      type: Boolean,
+      default: false,
+    },
+    // 虚线按钮
+    dashed: {
+      type: Boolean,
+      default: false,
     },
     // 最大圆角
     round: {

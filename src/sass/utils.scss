@@ -12,7 +12,6 @@
 }
 
 // button通过传入主色设置边框色,悬浮颜色,聚焦颜色...
-
 @mixin button-type($color, $background-color, $border-color) {
   color: $color;
   background-color: $background-color;
@@ -30,24 +29,53 @@
     color: $color;
     outline: none;
   }
-  // &.is-active {
-  //   background: mix($--color-black, $background-color, $--button-active-shade-percent);
-  //   border-color: mix($--color-black, $border-color, $--button-active-shade-percent);
-  //   color: $color;
-  // }
+  // 幽灵按钮样式
+  &.is-ghost {
+    background-color: rgba($color: $background-color, $alpha: 0) !important;
+    border-color: $border-color !important;
+    color: $background-color;
+    &:hover,
+    &:focus {
+      color: mix(#ffffff, $border-color, 10%);
+      background-color: rgba($color: $background-color, $alpha: 0.1) !important;
+    }
+  
+    &:active {
+      color: mix(#000000, $border-color, 2%);
+      background-color: rgba($color: $background-color, $alpha: 0.2) !important;
+      outline: none;
+    }
+  }
+  // 虚线按钮样式
+  &.is-dashed{
+    background-color: rgba($color: $background-color, $alpha: 0) !important;
+    color: $background-color;
+    border-color: $border-color !important;
+    border-style: dashed;
+    &:hover,
+    &:focus {
+      color: mix(#ffffff, $border-color, 10%);
+      background-color: rgba($color: $background-color, $alpha: 0.1) !important;
+      border-style: dashed;
+    }
+  
+    &:active {
+      color: mix(#000000, $border-color, 2%);
+      background-color: rgba($color: $background-color, $alpha: 0.2) !important;
+      border-style: dashed;
+      outline: none;
+    }
+  }
   // 禁用状态样式
-  // &.is-disabled {
-  //   &,
-  //   &:hover,
-  //   &:focus,
-  //   &:active {
-  //     color: $--color-white;
-  //     background-color: mix($background-color, $--color-white);
-  //     border-color: mix($border-color, $--color-white);
-  //   }
-  // }
-
-  // &.is-plain {
-  //   @include button-plain($background-color);
-  // }
+  &.is-disabled {
+    cursor:not-allowed;
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: mix(#ffffff, $background-color, 60%);
+      background-color: mix(#ffffff, $background-color, 95%) !important;
+      border-color: mix(#ffffff, $background-color, 80%) !important;
+    }
+  }
 }

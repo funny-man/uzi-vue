@@ -9,9 +9,29 @@
     <z-button size="medium">Medium Button</z-button>
     <div class="gap"/>
     <z-button class="my-icon" size="small">Small Button</z-button>
-    <z-button class="my-icon" type="success" size="small">success</z-button>
-    <z-button class="my-icon" type="warning" size="small">warning</z-button>
-    <z-button class="my-icon" type="error" size="small">error</z-button>
+    <div class="gap"/>
+    <z-button class="my-icon" round type="success" size="small">success</z-button>
+    <z-button class="my-icon" round type="warning" size="small">warning</z-button>
+    <z-button class="my-icon" round type="error" size="small">error</z-button>
+    <div class="gap"/>
+    <z-button class="my-icon" ghost size="small">Small Button</z-button>
+    <z-button class="my-icon" round ghost type="success" size="small">success</z-button>
+    <z-button class="my-icon" edge ghost type="warning" size="small">warning</z-button>
+    <z-button class="my-icon" ghost type="error" size="small">error</z-button>
+    <div class="gap"/>
+    <z-button class="my-icon" dashed size="small">Small Button</z-button>
+    <z-button class="my-icon" dashed round type="success" size="small">success</z-button>
+    <z-button class="my-icon" dashed edge type="warning" size="small">warning</z-button>
+    <z-button class="my-icon" dashed type="error" size="small">error</z-button>
+    <div class="gap"/>
+    <z-button class="my-icon" disabled ghost size="small" @click="goShares">Small Button</z-button>
+    <z-button class="my-icon" disabled dashed round type="success" size="small" @click="goShares">
+      success
+    </z-button>
+    <z-button class="my-icon" disabled edge type="warning" size="small" @click="goShares">
+      warning
+    </z-button>
+    <z-button class="my-icon" disabled type="error" size="small" @click="goShares">error</z-button>
     <div class="gap"/>
     <z-button class="my-icon" loading>分 享</z-button>
     <z-button class="my-icon" size="medium" icon="settings"></z-button>
@@ -21,7 +41,8 @@
     </z-button>
     <z-button class="my-icon two" circle icon="shares"></z-button>
     <z-button class="my-icon three" circle icon="shares"></z-button>
-     <z-button class="my-icon" @click="goShares" :loading="isLoading" icon="shares">
+    <div class="gap"/>
+    <z-button class="my-icon" @click="goShares" :loading="isLoading" icon="shares">
     </z-button>
     <z-button class="my-icon" size="medium" icon="shares"></z-button>
     <z-button class="my-icon" size="small" icon="shares"></z-button>
@@ -32,9 +53,15 @@
       <z-button round size="medium" icon="right" iconPosition="right">下一页</z-button>
     </z-button-group>
     <z-button-group>
-      <z-button size="medium" icon="left">上一页</z-button>
-      <z-button size="medium" icon="shares"></z-button>
-      <z-button size="medium" icon="right" iconPosition="right">下一页</z-button>
+      <z-button size="medium" ghost icon="left">上一页</z-button>
+      <z-button size="medium" ghost icon="shares"></z-button>
+      <z-button size="medium" ghost icon="right" iconPosition="right">下一页</z-button>
+    </z-button-group>
+    <div class="gap"/>
+    <z-button-group>
+      <z-button type="primary" size="medium" icon="left">上一页</z-button>
+      <z-button type="primary" size="medium" icon="shares"></z-button>
+      <z-button type="primary" size="medium" icon="right" iconPosition="right">下一页</z-button>
     </z-button-group>
     <div class="gap"/>
     <z-icon class="my-icon icon-font" icon="shares"></z-icon>
