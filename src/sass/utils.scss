@@ -1,0 +1,97 @@
+@import './animation.scss';
+
+// 控制用户是否可以选中文本
+@mixin utils-user-select($value) {
+  -moz-user-select: $value;
+  -webkit-user-select: $value;
+  -ms-user-select: $value;
+}
+// 换行省略
+@mixin utils-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// button阴影
+@mixin btn-shadow($color, $alpha) {
+  box-shadow: 0 3px 9px rgba($color: $color, $alpha: $alpha);
+}
+
+// button通过传入主色设置边框色,悬浮颜色,聚焦颜色...
+@mixin button-type($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  &:hover,
+  &:focus {
+    background: mix(#ffffff, $background-color, 10%);
+    border-color: mix(#ffffff, $border-color, 10%);
+    color: $color;
+  }
+  &:active {
+    background: mix(#000000, $background-color, 10%);
+    border-color: mix(#000000, $border-color, 10%);
+    color: $color;
+    outline: none;
+  }
+  &.is-shadow {
+    @include btn-shadow($background-color,.5);
+  }
+  // 幽灵按钮样式
+  &.is-ghost {
+    background-color: rgba($color: $background-color, $alpha: 0);
+    border-color: $border-color !important;
+    color: $background-color;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    &:hover,
+    &:focus {
+      color: mix(#ffffff, $border-color, 10%);
+      background-color: rgba($color: $background-color, $alpha: 0.1) !important;
+    }
+  
+    &:active {
+      color: mix(#000000, $border-color, 2%);
+      background-color: rgba($color: $background-color, $alpha: 0.2) !important;
+      outline: none;
+    }
+  }
+  // 虚线按钮样式
+  &.is-dashed{
+    background-color: rgba($color: $background-color, $alpha: 0);
+    color: $background-color;
+    border-color: $border-color !important;
+    border-style: dashed;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    &:hover,
+    &:focus {
+      color: mix(#ffffff, $border-color, 10%);
+      background-color: rgba($color: $background-color, $alpha: 0.1) !important;
+      border-style: dashed;
+    }
+  
+    &:active {
+      color: mix(#000000, $border-color, 2%);
+      background-color: rgba($color: $background-color, $alpha: 0.2) !important;
+      border-style: dashed;
+      outline: none;
+    }
+  }
+  // 点击按钮特效
+  &.spread {
+    animation: .5s spread linear;
+  }
+  // 禁用状态样式
+  &.is-disabled {
+    cursor:not-allowed;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: mix(#ffffff, $background-color, 60%);
+      background-color: mix(#ffffff, $background-color, 95%) !important;
+      border-color: mix(#ffffff, $background-color, 80%) !important;
+    }
+  } 
+}
