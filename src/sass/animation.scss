@@ -8,15 +8,3 @@
   100% {transform:rotate(360deg) }
 }
 
-// button点击阴影扩散效果
-@mixin shadow-spread($color) {
-  box-shadow: 0 0 0 6px rgba($color: $color, $alpha: .3);
-  animation: .5s spread linear; 
-  @keyframes spread {
-    0% {box-shadow: 0 0 0 0 rgba($color: $color, $alpha: .3);}
-   10% {box-shadow: 0 0 0 6px rgba($color: $color, $alpha: .2);}
-  100% {box-shadow: 0 0 0 6px rgba($color: $color, $alpha: 0);}
-  }
-
-}
-

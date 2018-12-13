@@ -131,7 +131,7 @@ export default {
       if (timer) clearTimeout(timer);
       this.spread = true;
       timer = setTimeout(() => {
-        // this.spread = false;
+        this.spread = false;
       }, 500);
       this.$emit('click');
     },
@@ -164,6 +164,11 @@ export default {
     font-weight: $fontWeigth-bold;
   }
   border: 1px solid;
+  @keyframes spread {
+     0% {box-shadow: 0 0 0 0 rgba($color: $color-primary-pink, $alpha: .3);}
+    10% {box-shadow: 0 0 0 6px rgba($color: $color-primary-pink, $alpha: .2);}
+  100% {box-shadow: 0 0 0 6px rgba($color: $color-primary-pink, $alpha: 0);}
+  }
 }
 // 不传type的按钮样式
 .type-default {

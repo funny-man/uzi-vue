@@ -101,7 +101,6 @@ export default {
 <style lang="scss">
 @import "./sass/reset.scss";
 @import "./sass/var.scss";
-
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
