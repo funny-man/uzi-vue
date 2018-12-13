@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import zButton from '@/components/button/button.vue';
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
+describe('>>>>>>>>>>>>test-zButton', () => {
+  it('button禁用状态测试', () => {
     const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
+    const wrapper = shallowMount(zButton, {
       propsData: { msg },
     });
     expect(wrapper.text()).to.include(msg);
