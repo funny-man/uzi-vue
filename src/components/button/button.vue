@@ -172,19 +172,19 @@ export default {
 }
 // 不传type的按钮样式
 .type-default {
-  @include button-type($fontColor-white,$color-primary,$color-primary);
+  @include button-type($fontColor-white,$color-primary,$color-primary,type-default);
 }
 .type-primary {
-  @include button-type($fontColor-white,$color-primary-pink,$color-primary-pink);
+  @include button-type($fontColor-white,$color-primary-pink,$color-primary-pink,type-primary);
 }
 .type-success {
-  @include button-type($fontColor-white,$color-success,$color-success);
+  @include button-type($fontColor-white,$color-success,$color-success,type-success);
 }
 .type-warning {
-  @include button-type($fontColor-white,$color-warning,$color-warning);
+  @include button-type($fontColor-white,$color-warning,$color-warning,type-warning);
 }
 .type-error {
-  @include button-type($fontColor-white,$color-error,$color-error);
+  @include button-type($fontColor-white,$color-error,$color-error,type-error);
 }
 .is-block {
   width: 100%;
