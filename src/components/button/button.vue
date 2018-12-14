@@ -192,13 +192,6 @@ export default {
 .is-round {
   border-radius: $radius-size-round;
 }
-.is-circle {
-  border-radius: $radius-size-circle;
-  padding: 1em !important;
-  > .z-icon {
-    margin: 0 !important;
-  }
-}
 .is-edge {
   border-radius: 0;
 }
@@ -249,4 +242,11 @@ export default {
     点击按钮的动效果
   }
 *****************************************/
+.is-circle {
+  border-radius: $radius-size-circle;
+  padding: 1em;
+  > .z-icon {
+    margin: 0;
+  }
+}
 </style>
