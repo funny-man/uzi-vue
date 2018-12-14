@@ -3,6 +3,10 @@
 
 [![Build Status](https://www.travis-ci.org/funny-man/uzi-vue.svg?branch=develop)](https://www.travis-ci.org/funny-man/uzi-vue)
 
+## 进度...
+
+- 已完成button组件和button的单元测试
+
 ## Project setup
 ```
 npm install
