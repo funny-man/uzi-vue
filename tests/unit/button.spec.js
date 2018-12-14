@@ -34,6 +34,21 @@ describe('Button.vue', () => {
     wrapper.setProps({ size });
     expect(wrapper.attributes('class')).to.include('small');
   });
+  it('改变button类型', () => {
+    expect(wrapper.attributes('class')).to.include('default');
+    let type = 'primary';
+    wrapper.setProps({ type });
+    expect(wrapper.attributes('class')).to.include('primary');
+    type = 'success';
+    wrapper.setProps({ type });
+    expect(wrapper.attributes('class')).to.include('success');
+    type = 'warning';
+    wrapper.setProps({ type });
+    expect(wrapper.attributes('class')).to.include('warning');
+    type = 'error';
+    wrapper.setProps({ type });
+    expect(wrapper.attributes('class')).to.include('error');
+  });
   it('正确添加icon', () => {
     const icon = 'settings';
     wrapper.setProps({ icon });

@@ -132,7 +132,7 @@ export default {
       this.spread = true;
       timer = setTimeout(() => {
         this.spread = false;
-      }, 500);
+      }, 1000);
       this.$emit('click');
     },
   },
