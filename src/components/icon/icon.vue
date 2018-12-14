@@ -9,13 +9,13 @@ export default {
   name: 'z-icon',
   props: {
     icon: {
-      type: String,
+      type: String
     },
     loading: {
       type: Boolean,
-      default: false,
-    },
-  },
+      default: false
+    }
+  }
 };
 </script>
 

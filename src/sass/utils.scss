@@ -46,10 +46,10 @@
   }
   // 点击按钮特效
   &.spread {
-    animation: 1s $name linear;
+    animation: .8s $name linear;
     @keyframes #{$name} {
       0% {box-shadow: 0 0 0 0 rgba($color: $background-color, $alpha: .3);}
-     10% {box-shadow: 0 0 0 6px rgba($color: $background-color, $alpha: .2);}
+     20% {box-shadow: 0 0 0 6px rgba($color: $background-color, $alpha: .2);}
     100% {box-shadow: 0 0 0 6px rgba($color: $background-color, $alpha: 0);}
    }
   }

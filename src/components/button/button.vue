@@ -17,7 +17,7 @@
               'is-dashed': dashed,
               [`icon-${iconPosition}`]: true,
               'icon-center': noChild,
-              [`type-${type}`]: true,
+              [`type-${type}`]: true
             }
           ]"
     @click="clickBtn"
@@ -35,71 +35,71 @@ import Icon from '../icon/icon.vue';
 export default {
   name: 'z-button',
   components: {
-    'z-icon': Icon,
+    'z-icon': Icon
   },
   data() {
     return {
-      spread: false,
+      spread: false
     };
   },
   props: {
     // 禁用按钮
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     // 按钮尺寸large/medium/small
     size: {
       type: String,
-      default: 'large',
+      default: 'large'
     },
     // 按钮样式default/primary/success/warning/error
     type: {
       type: String,
-      default: 'default',
+      default: 'default'
     },
     // 幽灵按钮
     ghost: {
       type: Boolean,
-      default: false,
+      default: false
     },
     // 虚线按钮
     dashed: {
       type: Boolean,
-      default: false,
+      default: false
     },
     // 最大圆角
     round: {
       type: Boolean,
-      default: false,
+      default: false
     },
     // 圆形
     circle: {
       type: Boolean,
-      default: false,
+      default: false
     },
     // 直角按钮
     edge: {
       type: Boolean,
-      default: false,
+      default: false
     },
     // 阴影
     shadow: {
       type: Boolean,
-      default: false,
+      default: false
     },
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     // 块状按钮
     block: {
       type: Boolean,
-      default: false,
+      default: false
     },
     icon: {
       type: String,
-      default: '',
+      default: ''
     },
     // icon位置 left/right
     iconPosition: {
@@ -108,14 +108,14 @@ export default {
       // 属性检查器（检查传入iconPosition的值）
       validator(val) {
         return !(val !== 'left' && val !== 'right');
-      },
-    },
+      }
+    }
   },
   computed: {
     // 判断插槽是否有输入内容；来设置icon是否有左右margin
     noChild() {
       return !(this.$slots.default && this.$slots.default.length !== 0);
-    },
+    }
   },
   created() {
     // body监听touchstart并且回调为空函数，用来解决ios端:active不起作用
@@ -132,10 +132,10 @@ export default {
       this.spread = true;
       timer = setTimeout(() => {
         this.spread = false;
-      }, 1000);
+      }, 800);
       this.$emit('click');
-    },
-  },
+    }
+  }
 };
 </script>
 
