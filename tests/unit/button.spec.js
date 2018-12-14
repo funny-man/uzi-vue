@@ -115,6 +115,7 @@ describe('Button.vue', () => {
     expect(useElement.attributes('href')).to.eq(`#i-${icon}`);
   });
   it('设置icon的位置', () => {
+    // TODO: css没有测试，后面加上（测试lift和right的css值差异）
     expect(wrapper.classes().indexOf('icon-left')).to.not.eq(-1);
     expect(wrapper.classes().indexOf('icon-right')).to.eq(-1);
     const iconPosition = 'right';

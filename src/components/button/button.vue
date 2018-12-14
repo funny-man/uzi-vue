@@ -22,7 +22,7 @@
           ]"
     @click="clickBtn"
   >
-    <z-icon class="z-icon" v-if="icon||loading" :icon="icon" :loading="loading"></z-icon>
+    <z-icon class="z-icon" v-show="icon||loading" :icon="icon" :loading="loading"></z-icon>
     <div class="content">
       <slot></slot>
     </div>
