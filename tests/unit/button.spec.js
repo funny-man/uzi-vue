@@ -3,8 +3,7 @@ import { mount } from '@vue/test-utils';
 import Button from '@/components/button/button.vue';
 import Icon from '@/components/icon/icon.vue';
 import sinon from 'sinon';
-// import spies from 'chai-spies';
-// chai.use(spies);
+
 describe('Button.vue', () => {
   // 现在挂载组件，你便得到了这个包裹器
   // 包裹器的作用是Vue为其添加了方便的方法
