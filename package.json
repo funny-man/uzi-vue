@@ -38,6 +38,7 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
+    "sinon": "^7.2.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "node-sass": "^4.9.0",
@@ -56,7 +57,10 @@
     "rules": {
       "no-console": 0,
       "no-unused-expressions": 0,
-      "comma-dangle": [0, "never"]
+      "comma-dangle": [
+        0,
+        "never"
+      ]
     },
     "parserOptions": {
       "parser": "babel-eslint"
