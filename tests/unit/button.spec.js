@@ -2,13 +2,15 @@ import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
 import Button from '@/components/button/button.vue';
 import Icon from '@/components/icon/icon.vue';
-
+import sinon from 'sinon';
+// import spies from 'chai-spies';
+// chai.use(spies);
 describe('Button.vue', () => {
   // 现在挂载组件，你便得到了这个包裹器
   // 包裹器的作用是Vue为其添加了方便的方法
   // 也可以通过wrapper.vm获取实例进行原生操作
   // 具体文档：https://vue-test-utils.vuejs.org/zh/api/wrapper/#%E5%B1%9E%E6%80%A7
-  const wrapper = mount(Button);
+  let wrapper = mount(Button);
 
   it('可以禁用button', () => {
     const disabled = true;
@@ -102,12 +104,14 @@ describe('Button.vue', () => {
     wrapper.setProps({ loading: false });
   });
   it('正确添加icon', () => {
-    expect(wrapper.contains(Icon)).to.be.false;
+    // expect(wrapper.contains(Icon)).to.be.false;
+    expect(wrapper.find(Icon).isVisible()).to.be.false;
     const icon = 'settings';
     wrapper.setProps({ icon });
     // 选中子组件
     const useElement = wrapper.find('use');
-    expect(wrapper.contains(Icon)).to.be.true;
+    // expect(wrapper.contains(Icon)).to.be.true;
+    expect(wrapper.find(Icon).isVisible()).to.be.true;
     expect(useElement.attributes('href')).to.eq(`#i-${icon}`);
   });
   it('设置icon的位置', () => {
@@ -118,11 +122,33 @@ describe('Button.vue', () => {
     expect(wrapper.classes().indexOf('icon-left')).to.eq(-1);
     expect(wrapper.classes().indexOf('icon-right')).to.not.eq(-1);
   });
-  xit('测试slot的内容', () => {
-    // expect(wrapper.attributes('class')).to.include('icon-left');
-    // const iconPosition = 'right';
-    // wrapper.setProps({ iconPosition });
-    // expect(wrapper.attributes('class')).to.include('icon-center');
-    // wrapper.setSlot ({ iconPosition });
+  it('测试slot的内容', () => {
+    let sloteDefault = wrapper.vm.$slots.default;
+    expect(wrapper.find('div').text()).to.eq('');
+    expect(sloteDefault && sloteDefault.length ? sloteDefault.length : undefined).to.be.undefined;
+    expect(wrapper.classes().indexOf('icon-center')).to.not.eq(-1);
+    // 销毁实例
+    wrapper.destroy();
+    wrapper = mount(Button, {
+      slots: {
+        default: ['Button Name', '<div></div>', '<span></span>'],
+      }
+    });
+    sloteDefault = wrapper.vm.$slots.default;
+    expect(sloteDefault && sloteDefault.length ? sloteDefault.length : undefined).to.eq(3);
+    expect(wrapper.find('div').text()).to.eq('Button Name');
+    expect(wrapper.classes().indexOf('icon-center')).to.eq(-1);
+  });
+  it('测试按钮点击事件', () => {
+    wrapper.trigger('click');
+    // 判断点击按钮后有没有触发$emit的click事件
+    expect(wrapper.emitted().click).to.exist;
+
+    // 通过sinon判断函数是否被调用
+    // 一般当点击事件没有判断依据时候用这个
+    const clickHandler = sinon.stub();
+    wrapper.vm.$on('click', clickHandler);
+    wrapper.vm.$el.click();
+    expect(clickHandler.called).to.be.true;
   });
 });
