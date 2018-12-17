@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <z-input placeholder="请选择打断点"></z-input>
+    <div class="gap"/>
+    <z-input disabled></z-input>
+    <div class="gap"/>
     <z-button type="primary" shadow block loading>Large Button</z-button>
     <div class="gap" ref="test" style="width:100px"/>
     <z-button edge >Edge Button</z-button>
@@ -75,6 +79,7 @@
 import Button from './components/button/button.vue';
 import Icon from './components/icon/icon.vue';
 import ButtonGroup from './components/button_group/button_group.vue';
+import Input from './components/input/input.vue';
 
 export default {
   name: 'app',
@@ -82,6 +87,7 @@ export default {
     'z-button': Button,
     'z-icon': Icon,
     'z-button-group': ButtonGroup,
+    'z-input': Input
   },
   data() {
     return {
@@ -114,7 +120,7 @@ export default {
   transition: all .7s;
 }
 .my-icon {
-  color: $color-primary-pink;
+  color: $color-primary;
   margin-right: 10px !important;
 }
 .one {
