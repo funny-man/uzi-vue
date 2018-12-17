@@ -1,9 +1,11 @@
 # uzi-vue
 
+[![](https://img.shields.io/github/stars/funny-man/uzi-vue.svg?label=Stars&style=social)](https://github.com/funny-man/uzi-vue/stargazers)
+
 
 [![Build Status](https://www.travis-ci.org/funny-man/uzi-vue.svg?branch=develop)](https://www.travis-ci.org/funny-man/uzi-vue) [![](https://img.shields.io/npm/v/uzi-vue.svg)](https://www.npmjs.com/package/uzi-vue) [![](https://img.shields.io/npm/dt/uzi-vue.svg)](https://www.npmjs.com/package/uzi-vue) [![](https://img.shields.io/npm/l/uzi-vue.svg)](https://www.npmjs.com/package/uzi-vue)
 
->造一个轮子
+>造一个vue的ui框架，同事也是vue的学习过程
 
 
 
