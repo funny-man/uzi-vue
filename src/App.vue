@@ -3,10 +3,14 @@
     <div class="gap"/>
     <z-input prefix="settings"
              style="width:200px;display:inline-block"
-             placeholder="The Left Icon..."></z-input>
+             placeholder="The Left Icon..."
+             @change="change"
+    ></z-input>
     <z-input suffix="loading"
              style="width:200px;display:inline-block"
-             placeholder="The Right Icon..."></z-input>
+             placeholder="The Right Icon..."
+             @blur="blur"
+    ></z-input>
     <div class="gap"/>
     <z-input readonly value="我是只读的内容"  placeholder="Enter something..."></z-input>
     <div class="gap"/>
@@ -108,6 +112,12 @@ export default {
       console.log('分享成功');
       this.isLoading = !this.isLoading;
     },
+    change(e) {
+      console.log(e.target.value);
+    },
+    blur(e) {
+      console.log(e.target.value);
+    }
   },
 };
 </script>

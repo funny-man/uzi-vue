@@ -5,8 +5,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-import './svg';
-
+// import './svg';
 export default {
   name: 'z-icon',
   props: {

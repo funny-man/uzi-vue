@@ -151,4 +151,7 @@ describe('Button.vue', () => {
     wrapper.vm.$el.click();
     expect(clickHandler.called).to.be.true;
   });
+  it('销毁实例', () => {
+    wrapper.destroy();
+  });
 });

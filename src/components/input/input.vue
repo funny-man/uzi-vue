@@ -5,13 +5,18 @@
         'is-readonly': readonly,
         'is-prefix': prefix,
         'is-suffix': suffix
-       }">
+       }"
+    >
     <input class="input"
            :type="type"
            :placeholder="placeholder"
-           :value="value"
+           :value="value?value:''"
            :disabled="disabled"
            :readonly="readonly"
+           @change="$emit('change',$event)"
+           @input="$emit('input',$event)"
+           @focus="$emit('focus',$event)"
+           @blur="$emit('blur',$event)"
     />
     <z-icon class="z-icon" v-show="prefix||suffix" :icon="prefix||suffix"></z-icon>
   </div>
@@ -29,6 +34,10 @@ export default {
     type: {
       type: String,
       default: 'text'
+    },
+    value: {
+      type: String,
+      default: null
     },
     placeholder: {
       type: String,
@@ -49,10 +58,6 @@ export default {
       default: null
     },
     suffix: {
-      type: String,
-      default: null
-    },
-    value: {
       type: String,
       default: null
     }
