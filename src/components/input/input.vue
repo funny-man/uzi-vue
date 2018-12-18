@@ -2,11 +2,18 @@
   <div class="input-wrapper"
        :class="{
         'is-disabled': disabled,
-        'is-left': leftIcon,
-        'is-right': rightIcon
+        'is-readonly': readonly,
+        'is-prefix': prefix,
+        'is-suffix': suffix
        }">
-    <input class="input" :type="type" :placeholder="placeholder" :disabled="disabled" />
-    <z-icon class="z-icon" v-show="leftIcon||rightIcon" :icon="leftIcon||rightIcon"></z-icon>
+    <input class="input"
+           :type="type"
+           :placeholder="placeholder"
+           :value="value"
+           :disabled="disabled"
+           :readonly="readonly"
+    />
+    <z-icon class="z-icon" v-show="prefix||suffix" :icon="prefix||suffix"></z-icon>
   </div>
 </template>
 
@@ -32,11 +39,20 @@ export default {
       type: Boolean,
       default: false
     },
-    leftIcon: {
+    // 只读
+    readonly: {
+      type: Boolean,
+      default: false
+    },
+    prefix: {
       type: String,
       default: null
     },
-    rightIcon: {
+    suffix: {
+      type: String,
+      default: null
+    },
+    value: {
       type: String,
       default: null
     }
@@ -51,13 +67,15 @@ export default {
 
   .input-wrapper {
     font-size: 16px;
-    display: inline-block;
+    display: block;
     position: relative;
     .z-icon {
       color: $fontColor-primary-6;
     }
     .input {
       line-height: 1.5;
+      width: 100%;
+      box-sizing: border-box;
       padding: 7px 15px;
       border: 1px solid $color-gray-light-8;
       color: $fontColor-primary-1;
@@ -82,11 +100,29 @@ export default {
       }
     }
   }
-  .is-left {
+  .is-prefix {
     @include input-icon(left);
   }
-  .is-right {
+  .is-suffix {
     @include input-icon(right);
+  }
+  .is-readonly {
+    >.input {
+      &:hover {
+        border-color: $color-gray-light-8;
+        &+.z-icon {
+          color: $fontColor-primary-6;
+        }
+      }
+      &:focus {
+        outline: none;
+        border-color: $color-gray-light-8;
+        animation: none;
+        &+.z-icon {
+          color: $fontColor-primary-6;
+        }
+      }
+    }
   }
   .is-disabled {
     >.input {

@@ -1,9 +1,14 @@
 <template>
   <div id="app">
-    <z-input leftIcon="settings" placeholder="The Left Icon..."></z-input>
-    <z-input rightIcon="loading" placeholder="The Right Icon..."></z-input>
     <div class="gap"/>
-    <z-input placeholder="Enter something..."></z-input>
+    <z-input prefix="settings"
+             style="width:200px;display:inline-block"
+             placeholder="The Left Icon..."></z-input>
+    <z-input suffix="loading"
+             style="width:200px;display:inline-block"
+             placeholder="The Right Icon..."></z-input>
+    <div class="gap"/>
+    <z-input readonly value="我是只读的内容"  placeholder="Enter something..."></z-input>
     <div class="gap"/>
     <z-input disabled></z-input> <z-input disabled leftIcon="settings"></z-input>
     <div class="gap"/>
@@ -120,7 +125,7 @@ export default {
   background-color: #fff;
 }
 .gap {
-  height: 30px;
+  height: 40px;
   transition: all .7s;
 }
 .my-icon {
