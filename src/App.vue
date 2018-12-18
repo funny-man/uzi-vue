@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <z-input placeholder="请选择打断点"></z-input>
+    <z-input leftIcon="settings" placeholder="The Left Icon..."></z-input>
+    <z-input rightIcon="loading" placeholder="The Right Icon..."></z-input>
     <div class="gap"/>
-    <z-input disabled></z-input>
+    <z-input placeholder="Enter something..."></z-input>
+    <div class="gap"/>
+    <z-input disabled></z-input> <z-input disabled leftIcon="settings"></z-input>
     <div class="gap"/>
     <z-button type="primary" shadow block loading>Large Button</z-button>
     <div class="gap" ref="test" style="width:100px"/>
@@ -52,9 +55,9 @@
     <z-button class="my-icon" size="small" icon="shares"></z-button>
     <div class="gap"/>
     <z-button-group style="margin-right:20px;margin-bottom:20px">
-      <z-button round size="medium" icon="left">上一页</z-button>
-      <z-button round size="medium" icon="shares"></z-button>
-      <z-button round size="medium" icon="right" iconPosition="right">下一页</z-button>
+      <z-button round icon="left">上一页</z-button>
+      <z-button round icon="shares"></z-button>
+      <z-button round icon="right" iconPosition="right">下一页</z-button>
     </z-button-group>
     <z-button-group>
       <z-button size="medium" ghost icon="left">上一页</z-button>
@@ -63,9 +66,9 @@
     </z-button-group>
     <div class="gap"/>
     <z-button-group>
-      <z-button type="primary" size="medium" icon="left">上一页</z-button>
-      <z-button type="primary" size="medium" icon="shares"></z-button>
-      <z-button type="primary" size="medium" icon="right" iconPosition="right">下一页</z-button>
+      <z-button type="primary" size="small" icon="left">上一页</z-button>
+      <z-button type="primary" size="small" icon="shares"></z-button>
+      <z-button type="primary" size="small" icon="right" iconPosition="right">下一页</z-button>
     </z-button-group>
     <div class="gap"/>
     <z-icon class="my-icon icon-font" icon="shares"></z-icon>
@@ -113,7 +116,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   color: #2c3e50;
-  margin: 30px 30px;
+  padding: 30px 30px;
+  background-color: #fff;
 }
 .gap {
   height: 30px;

@@ -38,11 +38,11 @@
   }
   // 幽灵按钮样式
   &.is-ghost {
-    @include button-ethereal ($background-color,solid)
+    @include button-air ($background-color,solid)
   }
   // 虚线按钮样式
   &.is-dashed{
-    @include button-ethereal ($background-color,dashed);
+    @include button-air ($background-color,dashed);
   }
   // 点击按钮特效
   &.spread {
@@ -68,8 +68,7 @@
   } 
 }
 
-
-@mixin button-ethereal ($color,$line-type){
+@mixin button-air ($color,$line-type){
   background-color: rgba($color: $color, $alpha: 0);
   color: $color;
   border-color: $color;
@@ -101,4 +100,17 @@
       border-color: mix(#ffffff, $color, 80%);
     }
   } 
+}
+
+@mixin input-icon($w) {
+  >.input{
+    padding-#{$w}: 30px;
+  }
+  >.z-icon {
+    position: absolute;
+    top: 0;
+    #{$w}: 8px;
+    bottom: 0;
+    margin: auto;
+  }
 }
