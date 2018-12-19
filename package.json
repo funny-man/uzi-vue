@@ -1,8 +1,9 @@
 {
   "name": "uzi-vue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "uzi-vue---->",
-  "private": true,
+  "main": "./dist/index.html",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -10,6 +11,21 @@
     "test:unit": "vue-cli-service test:unit --watch",
     "test": "vue-cli-service test:unit"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/funny-man/uzi-vue"
+  },
+  "bugs": {
+    "url": "https://github.com/funny-man/uzi-vue/issues"
+  },
+  "homepage": "https://github.com/funny-man/uzi-vue",
+  "keywords": [
+    "vue",
+    "ui",
+    "uzi"
+  ],
+  "author": "zeeliu<zeeliu666@163.com>",
+  "license": "MIT",
   "dependencies": {
     "vue": "^2.5.17"
   },
@@ -22,6 +38,7 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
+    "sinon": "^7.2.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "node-sass": "^4.9.0",
@@ -37,7 +54,14 @@
       "plugin:vue/essential",
       "@vue/airbnb"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": 0,
+      "no-unused-expressions": 0,
+      "comma-dangle": [
+        0,
+        "never"
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

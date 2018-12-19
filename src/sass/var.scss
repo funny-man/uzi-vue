@@ -1,0 +1,149 @@
+/* 主题Colors
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+$color-white: #fff;
+$color-black: #000;
+
+
+$color-aux: #252525;
+$color-primary: #F35F85;
+// 冷灰
+$color-gray: #2E2F33;
+// 暖灰？
+// $color-gray: #2E2F33;
+
+// 辅助色
+$color-success: #60D08C;
+$color-warning: #F3AD64;
+$color-error: #F57676;
+
+// 颜色梯度aux
+$color-aux-light-1: mix($color-white, $color-aux, 10%);
+$color-aux-light-2: mix($color-white, $color-aux, 20%);
+$color-aux-light-4: mix($color-white, $color-aux, 40%);
+$color-aux-light-6: mix($color-white, $color-aux, 60%);
+$color-aux-light-8: mix($color-white, $color-aux, 80%);
+$color-aux-light-9: mix($color-white, $color-aux, 90%);
+$color-aux-dark-1: mix($color-black, $color-aux, 10%);
+
+// 颜色梯度primary
+$color-primary-light-1: mix($color-white, $color-primary, 10%);
+$color-primary-light-2: mix($color-white, $color-primary, 20%);
+$color-primary-light-4: mix($color-white, $color-primary, 40%);
+$color-primary-light-6: mix($color-white, $color-primary, 60%);
+$color-primary-light-8: mix($color-white, $color-primary, 80%);
+$color-primary-dark-1: mix($color-black, $color-primary, 5%);
+
+// 颜色梯度gray
+$color-gray-light-1: mix($color-white, $color-gray, 10%);
+$color-gray-light-2: mix($color-white, $color-gray, 20%);
+$color-gray-light-4: mix($color-white, $color-gray, 40%);
+$color-gray-light-6: mix($color-white, $color-gray, 60%);
+$color-gray-light-8: mix($color-white, $color-gray, 80%);
+$color-gray-light-9: mix($color-white, $color-gray, 90%);
+$color-gray-light-10: mix($color-white, $color-gray, 96%);
+
+
+/* 字体Colors
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+$fontColor-white: #fff;
+$fontColor-black: #000;
+
+$fontColor-333: #333;
+$fontColor-666: #666;
+$fontColor-999: #999;
+
+$fontColor-primary: #2E2F33;
+// 文字颜色梯度a
+$fontColor-primary-1: mix($color-white, $fontColor-primary, 10%);
+$fontColor-primary-2: mix($color-white, $fontColor-primary, 20%);
+$fontColor-primary-4: mix($color-white, $fontColor-primary, 40%);
+$fontColor-primary-6: mix($color-white, $fontColor-primary, 60%);
+$fontColor-primary-8: mix($color-white, $fontColor-primary, 80%);
+$fontColor-primary-9: mix($color-white, $fontColor-primary, 90%);
+
+/* Border
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+$border-width-base: 1px;
+
+$border-style-solid: solid;
+$border-style-dashed: dashed;
+
+$border-color-base: #dcdfe6;
+$border-color-light: #e4e7ed;
+$border-color-lighter: #ebeef5;
+$border-color-extra-light: #f2f6fc;
+// $border-color-hover: $--color-text-placeholder;
+
+// 实线
+$border-base: $border-width-base $border-style-solid $border-color-base;
+// 虚线
+$border-base: $border-width-base $border-style-dashed $border-color-base;
+
+
+/* Radius
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+// radius-size
+$radius-size-base: 3px;
+$radius-size-big: 10px;
+$radius-size-medium: 6px;
+$radius-size-small: 4px;
+
+// max radius
+$radius-size-circle: 100%;
+$radius-size-round: 99999px;
+
+/* Box-shadow
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+$btn-shadow-base: 0 3px 9px rgba(243, 95, 133, .5);
+
+/* Size
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+// font-size
+$fontSize-xxxx: 32px;
+$fontSize-xxx: 30px;
+$fontSize-xx: 28px;
+$fontSize-x: 24px;
+$fontSize-mmm: 20px;
+$fontSize-mm: 18px;
+$fontSize-m: 16px;
+$fontSize-s: 14px;
+$fontSize-ss: 12px;
+$fontSize-sss: 10px;
+
+// font-weigth
+$fontWeigth-bold: bold;
+$fontWeigth-medium: 500;
+$fontWeigth-slim: 300;
+
+/* 用于媒体查询的var
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+// 定义媒体查询用到的屏幕宽度
+$_media_sm: 768px !default;
+$_media_md: 992px !default;
+$_media_lg: 1200px !default;
+$_media_xl: 1920px !default;
+
+$_media_points: (
+  'xs' : (max-width: $_media_sm - 1),
+  'sm' : (min-width: $_media_sm),
+  'md' : (min-width: $_media_md),
+  'lg' : (min-width: $_media_lg),
+  'xl' : (min-width: $_media_xl)
+);
+
+// $--breakpoints-spec: (
+//   'xs-only' : (max-width: $sm - 1),
+//   'sm-and-up' : (min-width: $sm),
+//   'sm-only': "(min-width: #{$sm}) and (max-width: #{$md} - 1)",
+//   'sm-and-down': (max-width: $md - 1),
+//   'md-and-up' : (min-width: $md),
+//   'md-only': "(min-width: #{$md}) and (max-width: #{$lg } - 1)",
+//   'md-and-down': (max-width: $lg - 1),
+//   'lg-and-up' : (min-width: $lg),
+//   'lg-only': "(min-width: #{$lg}) and (max-width: #{$xl } - 1)",
+//   'lg-and-down': (max-width: $xl - 1),
+//   'xl-only' : (min-width: $xl),
+// );
