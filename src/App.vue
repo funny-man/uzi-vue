@@ -34,7 +34,7 @@
     <z-button class="my-icon" shadow  round type="warning" size="small">warning</z-button>
     <z-button class="my-icon" round type="error" size="small">error</z-button>
     <div class="gap"/>
-    <z-button class="my-icon" ghost size="small">Small Button</z-button>
+    <z-button class="my-icon" ghost size="small">+ 关注</z-button>
     <z-button class="my-icon" round ghost type="success" size="small">success</z-button>
     <z-button class="my-icon" shadow edge ghost type="warning" size="small">warning</z-button>
     <z-button class="my-icon" ghost type="error" size="small">error</z-button>
