@@ -62,25 +62,6 @@ $fontColor-primary-6: mix($color-white, $fontColor-primary, 60%);
 $fontColor-primary-8: mix($color-white, $fontColor-primary, 80%);
 $fontColor-primary-9: mix($color-white, $fontColor-primary, 90%);
 
-
-// $color-info: #909399;
-
-// $--color-success-light: mix($--color-white, $--color-success, 80%);
-// $--color-warning-light: mix($--color-white, $--color-warning, 80%);
-// $--color-danger-light: mix($--color-white, $--color-danger, 80%);
-// $--color-info-light: mix($--color-white, $--color-info, 80%);
-
-// $--color-success-lighter: mix($--color-white, $--color-success, 90%);
-// $--color-warning-lighter: mix($--color-white, $--color-warning, 90%);
-// $--color-danger-lighter: mix($--color-white, $--color-danger, 90%);
-// $--color-info-lighter: mix($--color-white, $--color-info, 90%);
-
-// $--color-text-primary: #303133;
-// $--color-text-regular: #606266;
-// $--color-text-secondary: #909399;
-// $--color-text-placeholder: #c0c4cc;
-
-
 /* Border
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 $border-width-base: 1px;
@@ -100,6 +81,8 @@ $border-base: $border-width-base $border-style-solid $border-color-base;
 $border-base: $border-width-base $border-style-dashed $border-color-base;
 
 
+/* Radius
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 // radius-size
 $radius-size-base: 3px;
 $radius-size-big: 10px;
@@ -113,6 +96,7 @@ $radius-size-round: 99999px;
 /* Box-shadow
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 $btn-shadow-base: 0 3px 9px rgba(243, 95, 133, .5);
+
 /* Size
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -132,3 +116,34 @@ $fontSize-sss: 10px;
 $fontWeigth-bold: bold;
 $fontWeigth-medium: 500;
 $fontWeigth-slim: 300;
+
+/* 用于媒体查询的var
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+// 定义媒体查询用到的屏幕宽度
+$_media_sm: 768px !default;
+$_media_md: 992px !default;
+$_media_lg: 1200px !default;
+$_media_xl: 1920px !default;
+
+$_media_points: (
+  'xs' : (max-width: $_media_sm - 1),
+  'sm' : (min-width: $_media_sm),
+  'md' : (min-width: $_media_md),
+  'lg' : (min-width: $_media_lg),
+  'xl' : (min-width: $_media_xl)
+);
+
+// $--breakpoints-spec: (
+//   'xs-only' : (max-width: $sm - 1),
+//   'sm-and-up' : (min-width: $sm),
+//   'sm-only': "(min-width: #{$sm}) and (max-width: #{$md} - 1)",
+//   'sm-and-down': (max-width: $md - 1),
+//   'md-and-up' : (min-width: $md),
+//   'md-only': "(min-width: #{$md}) and (max-width: #{$lg } - 1)",
+//   'md-and-down': (max-width: $lg - 1),
+//   'lg-and-up' : (min-width: $lg),
+//   'lg-only': "(min-width: #{$lg}) and (max-width: #{$xl } - 1)",
+//   'lg-and-down': (max-width: $xl - 1),
+//   'xl-only' : (min-width: $xl),
+// );

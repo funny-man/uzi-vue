@@ -1,3 +1,4 @@
+@import './var.scss';
 // 控制用户是否可以选中文本
 @mixin utils-user-select($value) {
   -moz-user-select: $value;
@@ -102,6 +103,8 @@
   } 
 }
 
+
+// input-按钮位置
 @mixin input-icon($w) {
   >.input{
     padding-#{$w}: 36px;
@@ -112,5 +115,19 @@
     #{$w}: 14px;
     bottom: 0;
     margin: auto;
+  }
+}
+
+// 栅格布局响应式样式
+@mixin grid-media($key, $map: $_media_points) {
+  // map-has-key($map, $key)判断传入的$key是否在$map: $_media_points中有没有定义
+  // map-get($map, $key)获取$map中的 $key的值
+  // inspect($value) Maps不能转换为纯CSS。作为变量的值或参数传递给CSS函数将会导致错误。 使用inspect($value)函数以产生输出字符串，这对于调试 maps 非常有用。
+  @if map-has-key($map, $key) {
+    @media only screen and #{inspect(map-get($map, $key))}{
+      @content;
+    }
+  } @else {
+    @warn "没有定义: `#{$map}`";
   }
 }
