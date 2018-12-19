@@ -5,7 +5,7 @@
 
 [![Build Status](https://www.travis-ci.org/funny-man/uzi-vue.svg?branch=develop)](https://www.travis-ci.org/funny-man/uzi-vue) [![](https://img.shields.io/npm/v/uzi-vue.svg)](https://www.npmjs.com/package/uzi-vue) [![](https://img.shields.io/npm/dt/uzi-vue.svg)](https://www.npmjs.com/package/uzi-vue) [![](https://img.shields.io/npm/l/uzi-vue.svg)](https://www.npmjs.com/package/uzi-vue)
 
->造一个vue的ui框架，同是也是vue的学习过程
+>造一个vue的ui框架，同时也是vue的学习过程
 
 
 
