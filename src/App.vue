@@ -1,5 +1,40 @@
 <template>
   <div id="app">
+    <z-row gutter="12020">
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+    </z-row>
+    <z-row gutter="12020">
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+    </z-row>
+    <z-row gutter="12020">
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+    </z-row>
+    <z-row gutter="12020">
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+    </z-row>
+    <z-row gutter="12020">
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+      <z-col class="z-col"></z-col>
+    </z-row>
+    <z-row gutter="12020">
+      <z-col class="z-col z-col-2"></z-col>
+      <z-col class="z-col z-col-22"></z-col>
+    </z-row>
+    <hr>
     <div class="gap"/>
     <z-input prefix="settings"
              style="width:200px;display:inline-block"
@@ -96,6 +131,8 @@ import Button from './components/button/button.vue';
 import Icon from './components/icon/icon.vue';
 import ButtonGroup from './components/button_group/button_group.vue';
 import Input from './components/input/input.vue';
+import Row from './components/row/row.vue';
+import Col from './components/col/col.vue';
 
 export default {
   name: 'app',
@@ -103,7 +140,9 @@ export default {
     'z-button': Button,
     'z-icon': Icon,
     'z-button-group': ButtonGroup,
-    'z-input': Input
+    'z-input': Input,
+    'z-row': Row,
+    'z-col': Col
   },
   data() {
     return {
@@ -144,6 +183,11 @@ export default {
   color: #2c3e50;
   padding: 30px 30px;
   background-color: #fff;
+}
+.z-col {
+  background-color: pink;
+  border: 1px solid red;
+  height: 40px;
 }
 .gap {
   height: 40px;
