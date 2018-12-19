@@ -76,6 +76,8 @@ describe('Input.vue', () => {
       expect(wrapper.emitted()[eventName]).to.exist;
       expect(clickHandler.called).to.be.true;
       expect(clickHandler.calledWith(evt)).to.be.true;
+      // 最后一个用例销毁实例
+      wrapper.destroy();
     });
   });
   // it('测试change事件', () => {
@@ -130,7 +132,4 @@ describe('Input.vue', () => {
   //   expect(clickHandler.called).to.be.true;
   //   expect(clickHandler.calledWith(evt)).to.be.true;
   // });
-  it('销毁实例', () => {
-    wrapper.destroy();
-  });
 });

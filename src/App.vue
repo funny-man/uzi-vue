@@ -5,7 +5,11 @@
              style="width:200px;display:inline-block"
              placeholder="The Left Icon..."
              @change="change"
+             v-model="msg"
     ></z-input>
+    <span>{{ msg }}</span>
+    <button @click="add">-</button>
+    <button @click="msg+=1">+</button>
     <z-input suffix="loading"
              style="width:200px;display:inline-block"
              placeholder="The Right Icon..."
@@ -14,7 +18,7 @@
     <div class="gap"/>
     <z-input readonly value="我是只读的内容"  placeholder="Enter something..."></z-input>
     <div class="gap"/>
-    <z-input disabled></z-input> <z-input disabled leftIcon="settings"></z-input>
+    <z-input disabled></z-input> <z-input disabled prefix="settings"></z-input>
     <div class="gap"/>
     <z-button type="primary" shadow block loading>Large Button</z-button>
     <div class="gap" ref="test" style="width:100px"/>
@@ -104,6 +108,7 @@ export default {
   data() {
     return {
       isLoading: false,
+      msg: 'zee'
     };
   },
   methods: {
@@ -117,6 +122,12 @@ export default {
     },
     blur(e) {
       console.log(e.target.value);
+    },
+    add() {
+      const arr = this.msg.split('');
+      const { length } = arr;
+      arr.length = length - 1;
+      this.msg = arr.join('');
     }
   },
 };

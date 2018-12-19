@@ -104,12 +104,12 @@
 
 @mixin input-icon($w) {
   >.input{
-    padding-#{$w}: 30px;
+    padding-#{$w}: 36px;
   }
   >.z-icon {
     position: absolute;
     top: 0;
-    #{$w}: 8px;
+    #{$w}: 14px;
     bottom: 0;
     margin: auto;
   }
