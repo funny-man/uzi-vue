@@ -1,5 +1,25 @@
 <template>
   <div id="app">
+    <div class="gap"/>
+    <z-input prefix="settings"
+             style="width:200px;display:inline-block"
+             placeholder="The Left Icon..."
+             @change="change"
+             v-model="msg"
+    ></z-input>
+    <span>{{ msg }}</span>
+    <button @click="add">-</button>
+    <button @click="msg+=1">+</button>
+    <z-input suffix="loading"
+             style="width:200px;display:inline-block"
+             placeholder="The Right Icon..."
+             @blur="blur"
+    ></z-input>
+    <div class="gap"/>
+    <z-input readonly value="我是只读的内容"  placeholder="Enter something..."></z-input>
+    <div class="gap"/>
+    <z-input disabled></z-input> <z-input disabled prefix="settings"></z-input>
+    <div class="gap"/>
     <z-button type="primary" shadow block loading>Large Button</z-button>
     <div class="gap" ref="test" style="width:100px"/>
     <z-button edge >Edge Button</z-button>
@@ -48,9 +68,9 @@
     <z-button class="my-icon" size="small" icon="shares"></z-button>
     <div class="gap"/>
     <z-button-group style="margin-right:20px;margin-bottom:20px">
-      <z-button round size="medium" icon="left">上一页</z-button>
-      <z-button round size="medium" icon="shares"></z-button>
-      <z-button round size="medium" icon="right" iconPosition="right">下一页</z-button>
+      <z-button round icon="left">上一页</z-button>
+      <z-button round icon="shares"></z-button>
+      <z-button round icon="right" iconPosition="right">下一页</z-button>
     </z-button-group>
     <z-button-group>
       <z-button size="medium" ghost icon="left">上一页</z-button>
@@ -59,9 +79,9 @@
     </z-button-group>
     <div class="gap"/>
     <z-button-group>
-      <z-button type="primary" size="medium" icon="left">上一页</z-button>
-      <z-button type="primary" size="medium" icon="shares"></z-button>
-      <z-button type="primary" size="medium" icon="right" iconPosition="right">下一页</z-button>
+      <z-button type="primary" size="small" icon="left">上一页</z-button>
+      <z-button type="primary" size="small" icon="shares"></z-button>
+      <z-button type="primary" size="small" icon="right" iconPosition="right">下一页</z-button>
     </z-button-group>
     <div class="gap"/>
     <z-icon class="my-icon icon-font" icon="shares"></z-icon>
@@ -75,6 +95,7 @@
 import Button from './components/button/button.vue';
 import Icon from './components/icon/icon.vue';
 import ButtonGroup from './components/button_group/button_group.vue';
+import Input from './components/input/input.vue';
 
 export default {
   name: 'app',
@@ -82,10 +103,12 @@ export default {
     'z-button': Button,
     'z-icon': Icon,
     'z-button-group': ButtonGroup,
+    'z-input': Input
   },
   data() {
     return {
       isLoading: false,
+      msg: 'zee'
     };
   },
   methods: {
@@ -94,6 +117,18 @@ export default {
       console.log('分享成功');
       this.isLoading = !this.isLoading;
     },
+    change(e) {
+      console.log(e.target.value);
+    },
+    blur(e) {
+      console.log(e.target.value);
+    },
+    add() {
+      const arr = this.msg.split('');
+      const { length } = arr;
+      arr.length = length - 1;
+      this.msg = arr.join('');
+    }
   },
 };
 </script>
@@ -107,14 +142,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   color: #2c3e50;
-  margin: 30px 30px;
+  padding: 30px 30px;
+  background-color: #fff;
 }
 .gap {
-  height: 30px;
+  height: 40px;
   transition: all .7s;
 }
 .my-icon {
-  color: $color-primary-pink;
+  color: $color-primary;
   margin-right: 10px !important;
 }
 .one {

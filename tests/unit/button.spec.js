@@ -150,5 +150,7 @@ describe('Button.vue', () => {
     wrapper.vm.$on('click', clickHandler);
     wrapper.vm.$el.click();
     expect(clickHandler.called).to.be.true;
+    // 最后一个用例销毁实例
+    wrapper.destroy();
   });
 });
