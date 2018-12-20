@@ -1,38 +1,83 @@
 <template>
   <div id="app">
-    <z-row gutter="12020">
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
+    <z-row gutter="20">
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
     </z-row>
-    <z-row gutter="12020">
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
+    <hr>
+    <z-row gutter="0" type="flex" style="margin-top:20px">
+      <z-col span="6" class="z-col" style="height:20px"></z-col>
+      <z-col span="6" class="z-col" style="height:50px"></z-col>
+      <z-col span="6" class="z-col" style="height:10px"></z-col>
     </z-row>
-    <z-row gutter="12020">
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
+    <z-row gutter="0" type="flex" align="middle" style="margin-top:20px">
+      <z-col span="6" class="z-col" style="height:20px"></z-col>
+      <z-col span="6" class="z-col" style="height:50px"></z-col>
+      <z-col span="6" class="z-col" style="height:10px"></z-col>
     </z-row>
-    <z-row gutter="12020">
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
+    <z-row gutter="0" type="flex" align="bottom" style="margin-top:20px">
+      <z-col span="6" class="z-col" style="height:20px"></z-col>
+      <z-col span="6" class="z-col" style="height:50px"></z-col>
+      <z-col span="6" class="z-col" style="height:10px"></z-col>
     </z-row>
-    <z-row gutter="12020">
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
-      <z-col class="z-col"><div class="box"></div></z-col>
+    <hr>
+    <z-row gutter="0" type="flex">
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
     </z-row>
-    <z-row gutter="12020">
-      <z-col :span="2" class="z-col"><div class="box"></div></z-col>
-      <z-col :span="22" class="z-col"><div class="box"></div></z-col>
+    <z-row gutter="0" type="flex" justify="end">
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="0" type="flex" justify="center">
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="0" type="flex" justify="space-between">
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="0" type="flex" justify="space-around">
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <hr>
+    <z-row gutter="0">
+      <z-col span="2" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="0">
+      <z-col span="12" class="z-col"><div class="box"></div></z-col>
+      <z-col span="12" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="0">
+      <z-col span="8" class="z-col"><div class="box"></div></z-col>
+      <z-col span="8" class="z-col"><div class="box"></div></z-col>
+      <z-col span="8" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="20">
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="10" >
+      <z-col span="2" class="z-col"><div class="box"></div></z-col>
+      <z-col span="4" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="4" class="z-col"><div class="box"></div></z-col>
+      <z-col span="2" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="0">
+      <z-col span="2" class="z-col"><div class="box"></div></z-col>
+      <z-col span="22" class="z-col"><div class="box"></div></z-col>
     </z-row>
     <hr>
     <div class="gap"/>
@@ -190,7 +235,7 @@ export default {
 .box {
   background-color: red;
   height: 40px;
-  margin: 5px 10px;
+  border: 1px solid #333;
 }
 .gap {
   height: 40px;

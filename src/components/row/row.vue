@@ -1,5 +1,12 @@
 <template>
-<div class="row">
+<div class="z-row"
+     :class="{
+       [`is-${type}`]:true,
+       [`is-justify-${justify}`]:true,
+       [`is-align-${align}`]:true
+     }"
+     :style="`marginLeft:-${gutter?gutter/2:0}px;marginRight:-${gutter?gutter/2:0}px`"
+  >
   <slot></slot>
 </div>
 </template>
@@ -10,6 +17,26 @@ export default {
   components: {
   },
   props: {
+    // 间隔
+    gutter: [Number, String],
+    // 类型默认普通的浮动布局；可传flex使用flex布局
+    type: {
+      type: String,
+      default: 'float'
+    },
+    // 用于渲染的标签默认div
+    tag: {
+      type: String,
+      default: 'dev'
+    },
+    justify: {
+      type: String,
+      default: 'start'
+    },
+    align: {
+      type: String,
+      default: 'top'
+    },
   }
 };
 </script>
@@ -18,7 +45,34 @@ export default {
   @import '../../sass/var.scss';
   @import '../../sass/animation.scss';
   @import "../../sass/utils.scss";
-  .row {
+  .z-row {
+    display: block;
+    box-sizing: border-box;
+    // 清除浮动
+  }
+  .is-float {
+    @include utils-clearfix;
+  }
+  .is-flex {
     display: flex;
+  }
+  // flex布局下的参数
+  .is-justify-center {
+    justify-content: center;
+  }
+  .is-justify-end {
+    justify-content: flex-end;
+  }
+  .is-justify-space-between {
+    justify-content: space-between;
+  }
+  .is-justify-space-around {
+    justify-content: space-around;
+  }
+  .is-align-middle {
+    align-items: center;
+  }
+  .is-align-bottom {
+    align-items: flex-end;
   }
 </style>

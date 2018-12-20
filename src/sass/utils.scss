@@ -11,6 +11,19 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+// 清除浮动
+@mixin utils-clearfix {
+  @at-root {
+    &::before,
+    &::after {
+      display: table;
+      content: "";
+    }
+    &::after {
+      clear: both
+    }
+  }
+}
 
 // button阴影
 @mixin btn-shadow($color, $alpha) {
