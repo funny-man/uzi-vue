@@ -1,38 +1,38 @@
 <template>
   <div id="app">
     <z-row gutter="12020">
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
     </z-row>
     <z-row gutter="12020">
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
     </z-row>
     <z-row gutter="12020">
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
     </z-row>
     <z-row gutter="12020">
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
     </z-row>
     <z-row gutter="12020">
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
-      <z-col class="z-col"></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
+      <z-col class="z-col"><div class="box"></div></z-col>
     </z-row>
     <z-row gutter="12020">
-      <z-col class="z-col z-col-2"></z-col>
-      <z-col class="z-col z-col-22"></z-col>
+      <z-col :span="2" class="z-col"><div class="box"></div></z-col>
+      <z-col :span="22" class="z-col"><div class="box"></div></z-col>
     </z-row>
     <hr>
     <div class="gap"/>
@@ -186,8 +186,11 @@ export default {
 }
 .z-col {
   background-color: pink;
-  border: 1px solid red;
+}
+.box {
+  background-color: red;
   height: 40px;
+  margin: 5px 10px;
 }
 .gap {
   height: 40px;

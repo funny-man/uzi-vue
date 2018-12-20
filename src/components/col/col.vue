@@ -1,5 +1,7 @@
 <template>
-<div class="z-col"></div>
+<div class="z-col">
+  <slot></slot>
+</div>
 </template>
 
 <script type="text/ecmascript-6">
@@ -18,6 +20,9 @@ export default {
     }
   },
   props: {
+    span: {
+      type: [Number, String]
+    }
   }
 };
 </script>
