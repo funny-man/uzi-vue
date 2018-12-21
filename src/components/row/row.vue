@@ -2,7 +2,7 @@
  * @Author: zee
  * @Date: 2018-12-21 09:55:31
  * @Last Modified by: zee
- * @Last Modified time: 2018-12-21 11:26:38
+ * @Last Modified time: 2018-12-21 16:33:11
  */
 <template>
 <div class="z-row"
@@ -28,7 +28,10 @@ export default {
     // 类型默认普通的浮动布局；可传flex使用flex布局
     type: {
       type: String,
-      default: 'float'
+      default: 'float',
+      validator(val) {
+        return val === 'float' || val === 'flex';
+      }
     },
     // 用于渲染的标签默认div
     tag: {
@@ -37,11 +40,17 @@ export default {
     },
     justify: {
       type: String,
-      default: 'start'
+      default: 'start',
+      validator(val) {
+        return ['start', 'center', 'end', 'space-between', 'space-around'].indexOf(val) !== -1;
+      }
     },
     align: {
       type: String,
-      default: 'top'
+      default: 'top',
+      validator(val) {
+        return ['top', 'middle', 'bottom'].indexOf(val) !== -1;
+      }
     },
   }
 };
