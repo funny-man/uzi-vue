@@ -1,3 +1,9 @@
+/*
+ * @Author: zee
+ * @Date: 2018-12-21 09:55:31
+ * @Last Modified by: zee
+ * @Last Modified time: 2018-12-21 11:26:38
+ */
 <template>
 <div class="z-row"
      :class="{
@@ -48,7 +54,7 @@ export default {
   .z-row {
     display: block;
     box-sizing: border-box;
-    // 清除浮动
+    position: relative;
   }
   .is-float {
     @include utils-clearfix;

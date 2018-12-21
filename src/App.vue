@@ -1,10 +1,15 @@
 <template>
   <div id="app">
     <z-row gutter="20">
+      <z-col span="6" :offset="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" :offset="6" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="20">
       <z-col span="6" class="z-col"><div class="box"></div></z-col>
-      <z-col span="6" class="z-col"><div class="box"></div></z-col>
-      <z-col span="6" class="z-col"><div class="box"></div></z-col>
-      <z-col span="6" class="z-col"><div class="box"></div></z-col>
+      <z-col span="6" :offset="6" class="z-col"><div class="box"></div></z-col>
+    </z-row>
+    <z-row gutter="20">
+      <z-col span="12" :offset="6" class="z-col"><div class="box"></div></z-col>
     </z-row>
     <hr>
     <z-row gutter="0" type="flex" style="margin-top:20px">
