@@ -2,10 +2,10 @@
   <div id="app">
     <hr>
     <z-row gutter="20">
-      <z-col :xs="8" :sm="obj" :md="4" :lg="3" :xl="1" class="z-col"><div class="box"></div></z-col>
-      <z-col :xs="4" :sm="0" :md="8" :lg="9" :xl="11" class="z-col"><div class="box"></div></z-col>
-      <z-col :xs="4" :sm="0" :md="8" :lg="9" :xl="11" class="z-col"><div class="box"></div></z-col>
-      <z-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1" class="z-col"><div class="box"></div></z-col>
+      <z-col :xs="18" :sm="6" :md="4" :lg="3" :xl="1" class="z-col"><div class="box"></div></z-col>
+      <z-col :xs="6" :sm="6" :md="8" :lg="9" :xl="11" class="z-col"><div class="box"></div></z-col>
+      <z-col :xs="6" :sm="6" :md="8" :lg="9" :xl="11" class="z-col"><div class="box"></div></z-col>
+      <z-col :xs="18" :sm="6" :md="4" :lg="3" :xl="1" class="z-col"><div class="box"></div></z-col>
     </z-row>
     <z-row gutter="20">
       <z-col span="8" class="z-col"><div class="box"></div></z-col>
