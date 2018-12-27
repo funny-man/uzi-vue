@@ -1,5 +1,57 @@
 <template>
   <div id="app">
+    <z-layout>
+      <z-header>Header</z-header>
+      <z-main>Main</z-main>
+    </z-layout>
+    <hr>
+    <z-layout>
+      <z-header>Header</z-header>
+      <z-main>Main</z-main>
+      <z-footer>Footer</z-footer>
+    </z-layout>
+    <hr>
+    <z-layout>
+      <z-aside>Aside</z-aside>
+      <z-main>Main</z-main>
+    </z-layout>
+    <hr>
+    <z-layout>
+      <z-header>Header</z-header>
+      <z-layout>
+        <z-aside width="200px">Aside</z-aside>
+        <z-main>Main</z-main>
+      </z-layout>
+    </z-layout>
+    <hr>
+    <z-layout>
+      <z-header>Header</z-header>
+      <z-layout>
+        <z-aside width="200px">Aside</z-aside>
+        <z-layout>
+          <z-main>Main</z-main>
+          <z-footer>Footer</z-footer>
+        </z-layout>
+      </z-layout>
+    </z-layout>
+    <hr>
+    <z-layout>
+      <z-aside>Aside</z-aside>
+      <z-layout>
+        <z-header>Header</z-header>
+        <z-main>Main</z-main>
+      </z-layout>
+    </z-layout>
+    <hr>
+    <z-layout>
+      <z-aside>Aside</z-aside>
+      <z-layout>
+        <z-header>Header</z-header>
+        <z-main>Main</z-main>
+        <z-footer>Footer</z-footer>
+      </z-layout>
+    </z-layout>
+
     <hr>
     <z-row gutter="20">
       <z-col :xs="18" :sm="6" :md="4" :lg="3" :xl="1" class="z-col"><div class="box"></div></z-col>
@@ -207,6 +259,12 @@ import Input from './components/input/input.vue';
 import Row from './components/row/row.vue';
 import Col from './components/col/col.vue';
 
+import Layout from './components/layout/layout.vue';
+import Header from './components/header/header.vue';
+import Aside from './components/aside/aside.vue';
+import Main from './components/main/main.vue';
+import Footer from './components/footer/footer.vue';
+
 export default {
   name: 'app',
   components: {
@@ -215,7 +273,12 @@ export default {
     'z-button-group': ButtonGroup,
     'z-input': Input,
     'z-row': Row,
-    'z-col': Col
+    'z-col': Col,
+    'z-layout': Layout,
+    'z-header': Header,
+    'z-aside': Aside,
+    'z-main': Main,
+    'z-footer': Footer
   },
   data() {
     return {
@@ -260,6 +323,27 @@ export default {
   color: #2c3e50;
   padding: 30px 30px;
   background-color: #fff;
+}
+.z-layout {
+  background-color: #eee;
+  // margin-top: 20px;
+}
+.z-header {
+  background-color: rgb(211, 80, 108);
+  // line-height: 60px;
+}
+.z-footer {
+  background-color: rgb(226, 80, 112);
+  // line-height: 60px;
+}
+.z-main {
+  background-color: rgb(255, 162, 182);
+  line-height: 160px;
+}
+.z-aside {
+  background-color: rgb(221, 116, 138);
+  line-height: 200px;
+  // width: 100px;
 }
 .z-col {
   background-color: rgb(255, 228, 233);

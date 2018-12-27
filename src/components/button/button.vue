@@ -34,6 +34,7 @@ import Icon from '../icon/icon.vue';
 
 export default {
   name: 'z-button',
+  componentName: 'ZButton',
   components: {
     'z-icon': Icon
   },
