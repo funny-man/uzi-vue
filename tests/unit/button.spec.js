@@ -11,6 +11,11 @@ describe('Button.vue', () => {
   // 具体文档：https://vue-test-utils.vuejs.org/zh/api/wrapper/#%E5%B1%9E%E6%80%A7
   let wrapper = mount(Button);
 
+  it('存在Botton', () => {
+    expect(Button).to.exist;
+    expect(Icon).to.exist;
+  });
+
   it('可以禁用button', () => {
     const disabled = true;
     wrapper.setProps({ disabled });
