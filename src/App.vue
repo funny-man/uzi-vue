@@ -326,22 +326,23 @@ export default {
 }
 .z-layout {
   background-color: #eee;
+  text-align: center;
   // margin-top: 20px;
 }
 .z-header {
-  background-color: rgb(211, 80, 108);
+  background-color: rgb(255, 124, 157);
   // line-height: 60px;
 }
 .z-footer {
-  background-color: rgb(226, 80, 112);
+  background-color: rgb(255, 124, 157);
   // line-height: 60px;
 }
 .z-main {
-  background-color: rgb(255, 162, 182);
+  background-color: rgb(255, 157, 178);
   line-height: 160px;
 }
 .z-aside {
-  background-color: rgb(221, 116, 138);
+  background-color: rgb(255, 152, 174);
   line-height: 200px;
   // width: 100px;
 }
