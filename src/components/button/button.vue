@@ -23,7 +23,7 @@
     @click="clickBtn"
   >
     <z-icon class="z-icon" v-show="icon||loading" :icon="icon" :loading="loading"></z-icon>
-    <div class="content">
+    <div class="text-content">
       <slot></slot>
     </div>
   </button>
@@ -160,7 +160,7 @@ export default {
   // 聚焦状态下的border设置为none
   box-sizing: border-box;
   outline: none;
-  .content {
+  .text-content {
     // 字体加粗
     font-weight: $fontWeigth-bold;
   }
@@ -198,7 +198,7 @@ export default {
     order: 1;
     margin-right: 0.5em;
   }
-  > .content {
+  > .text-content {
     order: 2;
   }
 }
@@ -207,7 +207,7 @@ export default {
     margin-left: 0.5em;
     order: 2;
   }
-  > .content {
+  > .text-content {
     order: 1;
   }
 }
