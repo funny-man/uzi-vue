@@ -1,6 +1,5 @@
 ---
 home: true
-heroImage: /hero.png
 actionText: 快速上手 →
 actionLink: /install/
 features:
@@ -12,3 +11,5 @@ features:
   details: 做这个组件同时也是我学习Vue的过程，希望有兴趣的小伙伴给个star,一起学习！
 footer: MIT Licensed | Copyright © 2018-present Zee
 ---
+
+<!-- heroImage: /hero.png -->
