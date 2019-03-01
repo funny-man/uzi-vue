@@ -7,4 +7,6 @@ title: 'button 按钮'
 
 ## 代码演示
 
-<demos-button></demos-button>
+<ClientOnly>
+  <demos-button></demos-button>
+</ClientOnly>
